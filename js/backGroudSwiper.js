@@ -84,53 +84,48 @@ let slideAfternoonPresetImg = './assets/swiper/3-afternoon';
 let slideEveningPresetImg = './assets/swiper/4-evening';
 
 let slidePreset;
-let intervalUpdate = 20;
+let intervalUpdate = 0.3;
 
 let updateNumberPlus = () => {
-  if (Number(i) >= 20) {
-    i = 1;
-    localStorage.setItem('slideNumber', `${1}`)
+  if (Number(localStorage.getItem('slideNumber')) > 19) {
+    i = 2;
+    localStorage.setItem('slideNumber', `${1}`);
   } else {
     i += 1;
+    localStorage.setItem('slideNumber', `${i - 1}`);
   }
-  localStorage.setItem('slideNumber', `${i - 1}`)
-  console.log(`${i}`)
-  console.log(localStorage.getItem('slideNumber'))
   return i
 }
 
 let updateNumberMinus = () => {
-  if (Number(i) < 1) {
-    localStorage.setItem('slideNumber', `${21}`);
-    i = 20;
-    return i
+  if (Number(localStorage.getItem('slideNumber')) < 2) {
+    i = 19;
+    localStorage.setItem('slideNumber', `${20}`);
   } else {
     i -= 1;
+    localStorage.setItem('slideNumber', `${i + 1}`);
   }
-  console.log(`${i}`)
-  console.log(localStorage.getItem('slideNumber'))
-  localStorage.setItem('slideNumber', `${i + 1}`)
+  console.log(localStorage.getItem('slideNumber'));
+  console.log(i);
   return i
 }
   
 function getCurrentSlidePreset() {
-
-  if (hours > 23 || hours < 6) {
+  let hourses = new Date().getHours();
+  hourses
+  if (hourses > 23 || hourses < 6) {
     slidePreset = slideNightPresetImg;
     return slidePreset
   }
-
-  if (hours > 5 && hours < 11) {
+  if (hourses > 5 && hourses < 11) {
     slidePreset = slideMorningPresetImg;
     return slidePreset
   }
-
-  if (hours > 10 && hours < 20) {
+  if (hourses > 10 && hourses < 20) {
     slidePreset = slideAfternoonPresetImg;
     return slidePreset
   }
-
-  if (hours > 19 || hours < 0) {
+  if (hourses > 19 || hourses < 0) {
     slidePreset = slideEveningPresetImg;
     return slidePreset
   }
@@ -153,19 +148,16 @@ if (localStorage.getItem('slideNumber') === null || localStorage.getItem('slideN
 }
 
 rightButton.addEventListener('click', (e) => {
-  localStorage.setItem('slideNumber', `${i}`)
+  updateNumberPlus()
+  localStorage.setItem('slideNumber', `${i - 1}`)
   bodyBackGround.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
   bodyBackGround.style.backgroundSize = 'cover'
-
-  updateNumberPlus()
-
   setTimeout(() => {
-    bodyBackGroundContainer.style.transition = 'all 3s ease-in';
+    bodyBackGroundContainer.style.transition = 'all 2000ms ease-in';
     bodyBackGroundContainer.style.opacity = '0';
     bodyBackGroundContainer.style.visibility = 'hidden';
     rightButton.setAttribute('disabled', true);
-  }, 10);
-
+  }, 700);
   setTimeout(() => {
     rightButton.removeAttribute('disabled');
     bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
@@ -173,23 +165,20 @@ rightButton.addEventListener('click', (e) => {
     bodyBackGroundContainer.style.visibility = 'visible';
     bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
     bodyBackGroundContainer.style.backgroundSize = 'cover';
-  }, 3000);
+  }, 2700);
 });
 
 leftButton.addEventListener('click', (e) => {
-  localStorage.setItem('slideNumber', `${i}`)
+  updateNumberMinus()
+  localStorage.setItem('slideNumber', `${i + 1}`)
   bodyBackGround.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
   bodyBackGround.style.backgroundSize = 'cover'
-
-  updateNumberMinus()
-
   setTimeout(() => {
-    bodyBackGroundContainer.style.transition = 'all 3s ease-in';
+    bodyBackGroundContainer.style.transition = 'all 2000ms ease-in';
     bodyBackGroundContainer.style.opacity = '0';
     bodyBackGroundContainer.style.visibility = 'hidden';
     leftButton.setAttribute('disabled', true);
-  }, 10);
-
+  }, 300);
   setTimeout(() => {
     leftButton.removeAttribute('disabled');
     bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
@@ -197,34 +186,31 @@ leftButton.addEventListener('click', (e) => {
     bodyBackGroundContainer.style.visibility = 'visible';
     bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
     bodyBackGroundContainer.style.backgroundSize = 'cover';
-  }, 3000);
+  }, 2700);
 });
 
-// let autoPlusSlide = () => {
-//   localStorage.setItem('slideNumber', `${i}`)
-//   bodyBackGround.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
-//   bodyBackGround.style.backgroundSize = 'cover'
+let autoPlusSlide = () => {
+  updateNumberPlus()
+  localStorage.setItem('slideNumber', `${i - 1}`)
+  bodyBackGround.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
+  bodyBackGround.style.backgroundSize = 'cover';
+  setTimeout(() => {
+    bodyBackGroundContainer.style.transition = 'all 2000ms ease-in';
+    bodyBackGroundContainer.style.opacity = '0';
+    bodyBackGroundContainer.style.visibility = 'hidden';
+    rightButton.setAttribute('disabled', true);
+  }, 700);
+  setTimeout(() => {
+    rightButton.removeAttribute('disabled');
+    bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
+    bodyBackGroundContainer.style.opacity = '1';
+    bodyBackGroundContainer.style.visibility = 'visible';
+    bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
+    bodyBackGroundContainer.style.backgroundSize = 'cover';
+  }, 2700);
+};
 
-//   updateNumberPlus()
-
-//   setInterval(() => {
-//     bodyBackGroundContainer.style.transition = 'all 2s ease-in';
-//     bodyBackGroundContainer.style.opacity = '0';
-//     bodyBackGroundContainer.style.visibility = 'hidden';
-//     leftButton.setAttribute('disabled', true);
-//   }, 1000);
-
-//   setTimeout(() => {
-//     leftButton.removeAttribute('disabled');
-//     bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
-//     bodyBackGroundContainer.style.opacity = '1';
-//     bodyBackGroundContainer.style.visibility = 'visible';
-//     bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
-//     bodyBackGroundContainer.style.backgroundSize = 'cover';
-//   }, 3000);
-// }
-
-// setInterval(() => {
-//   autoPlusSlide();
-//   console.log('отработал');
-// }, intervalUpdate*100*60*60);
+setInterval(() => {
+  autoPlusSlide();
+  console.log('отработал');
+}, 1 * 100 * 60 );
