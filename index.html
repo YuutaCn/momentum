@@ -1,0 +1,130 @@
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="css/default.css" />
+    <!-- default -->
+    <link rel="stylesheet" href="css/clock.css" />
+    <!-- clock -->
+    <link rel="stylesheet" href="css/fonts.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="css/popups.css" />
+    <!-- popup -->
+    <link rel="stylesheet" href="css/settings.css" />
+    <!-- settings -->
+
+    <meta name="apple-mobile-web-app-title" content="Momentum" />
+    <meta name="application-name" content="Momentum" />
+    <meta name="msapplication-TileColor" content="#a1e7fe" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/favicon/mstile-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Momentum</title>
+  </head>
+
+
+
+
+
+
+
+  <body class="body">
+
+    <div class="modals">
+      <div class="modal-overlay">
+        <div class="settings-popup modal" data-target="settings">
+          <h3 class="setting-popup__name-menu red-hat-text">
+            Settings&nbsp;Menu
+          </h3>
+          <hr>
+          <div class="settings-list">
+            <ul class="settings-list__ul">
+              <li class="settings-list__li red-hat-text">Reset&nbsp;my&nbsp;Name
+                <div class="settings-list__hr"></div>
+                <ul class="settings-list__ul-button">
+                  <li class="settings-list__li-button">
+                    <button class="settings-list__button button-name-reset red-hat-text">Reset</button>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>еще пункт</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="backGroundShadow">
+
+      <header class="header container"></header>
+
+      <main class="main container">
+
+        <div class="main__clock" id="clock"></div>
+
+        <div class="main__date red-hat-text" id="date"></div>
+
+        <div class="main__hello">
+          <h1 class="main__helloText red-hat-text" id="helloText"></h1>
+          <form class="form-name-input"action="" method="get">
+            <input class="form-name-input__input red-hat-text" 
+                  type="text" 
+                  name="userName" 
+                  id="userName" 
+                  placeholder="Guest">
+            <button class="form-name-input__button" type="submit"></button>
+          </form>
+          <p class="main__userName red-hat-text"></p>
+        </div>
+
+      </main>
+
+      <footer class="footer container">
+
+        <button class="settings btn-on-click btns" data-path="settings">
+          <img class='settings__svg' src="./assets/svg/settings.svg" alt="settings.svg" width="90">
+        </button>
+
+      </footer>
+
+      <script src="./js/userName.js"></script>
+      <script src="./js/clock.js"></script>
+      <script src="./js/popup.js"></script>
+    </div>
+  </body>
+</html>

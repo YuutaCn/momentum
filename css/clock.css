@@ -1,0 +1,77 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__clock {
+  color: var(--white);
+  display: inline-flex;
+  font-family: 'Arial';
+  font-size: 110px;
+  justify-content: start;
+  border-radius: 4px;
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main__date {
+  color: var(--white-08);
+  display: inline-flex;
+  font-size: 32px; 
+  border-radius: 4px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main__hello {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+.main__helloText {
+  color: var(--white);
+  display: inline-flex;
+  font-size: 38px; 
+  border-radius: 4px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-name-input__input {
+  font-size: 38px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--placeholder-color);
+  width: 178px;
+  min-width: 40px;
+  place-content: 0;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 4px;
+}
+
+.main__userName {
+  font-size: 38px;
+  color: var(--placeholder-color);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 4px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: var(--placeholder-color);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: var(--placeholder-color);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: var(--placeholder-color);
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: var(--placeholder-color);
+}
+
+.form-name-input__button {
+  visibility: hidden;
+  opacity: 0;
+}
