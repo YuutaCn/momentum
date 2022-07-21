@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.main__clock {
+.clock {
   color: var(--white);
   display: inline-flex;
   font-family: 'Arial';

@@ -66,7 +66,7 @@
     <div class="modals">
       <div class="modal-overlay">
         <div class="settings-popup modal" data-target="settings">
-          <h3 class="setting-popup__name-menu red-hat-text">
+          <h1 class="setting-popup__name-menu red-hat-text">
             Settings&nbsp;Menu
           </h3>
           <hr>
@@ -81,7 +81,24 @@
                 </ul>
               </li>
               
-              <li>еще пункт</li>
+              <li class="settings-list__li red-hat-text">Hide&nbsp;the&nbsp;clock
+                <div class="settings-list__hr"></div>
+                <ul class="settings-list__ul-button">
+                  <li class="settings-list__li-button">
+                    <button class="settings-list__button hide-clock red-hat-text">Hide</button>
+                  </li>
+                </ul>
+              </li>
+
+
+              <li class="settings-list__li red-hat-text">Hide&nbsp;the&nbsp;date
+                <div class="settings-list__hr"></div>
+                <ul class="settings-list__ul-button">
+                  <li class="settings-list__li-button">
+                    <button class="settings-list__button hide-date red-hat-text">Hide</button>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -95,7 +112,13 @@
 
       <main class="main container">
 
-        <div class="main__clock" id="clock"></div>
+        <div class="clock" id="clock">
+          <!-- <div class="clock__hr"></div>
+          <div class="clock__dots-1">:</div>
+          <div class="clock__min"></div>
+          <div class="clock__dots-2">:</div>
+          <div class="clock__sec"></div> -->
+        </div>
 
         <div class="main__date red-hat-text" id="date"></div>
 

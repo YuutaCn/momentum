@@ -4,6 +4,8 @@ let userName = ''
 let form = document.querySelector('.form-name-input');
 let userNameString = document.querySelector('.main__userName');
 let reseter = document.querySelectorAll('.button-name-reset ')
+let hideClock = document.querySelectorAll('.hide-clock')
+let hideDate = document.querySelectorAll('.hide-date')
 
 btn.addEventListener("click", btnClick);
 
@@ -31,3 +33,11 @@ reseter.forEach((el) => {
     document.getElementsByClassName('main__userName')[0].style= "display: none";
   });
 });
+
+// hideClock.forEach((el) => {
+//   el.addEventListener('click', (e) => {
+//     localStorage.removeItem('userName')
+//     document.getElementsByClassName('main__clock')[0].style= "display: none";
+//   });
+// });
+
