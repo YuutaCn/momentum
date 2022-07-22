@@ -2,16 +2,96 @@ let clock = document.getElementById('clock');
 let date = document.getElementById('date');
 let helloText = document.getElementById('helloText');
 
+let hoursContainer = document.querySelector('.clock__hr');
+
+let minutesContainer = document.querySelector('.clock__min');
+
+let secondsContainer = document.querySelector('.clock__sec');
+
 let hours = new Date().getHours()
 let minutes = new Date().getMinutes()
 let seconds = new Date().getSeconds()
 
 
-function getCurrentTimeString() {
-  let clock = new Date().toTimeString().replace(/ .*/, '');
-
-  return clock.replace(/:/g, '&thinsp;:&thinsp;')
+function clockRemove() {
+  setInterval(
+    () => secondsContainer.classList.remove('clock__anim'), 2000
+  );
 }
+
+if (hours < 10) {
+  hoursContainer.innerHTML = `0${hours}`
+} else {
+  hoursContainer.innerHTML = hours
+}
+minutesContainer.innerHTML = `00`
+secondsContainer.innerHTML = `00`
+
+
+
+function getCurrentTimeString() {
+  let hours = new Date().getHours()
+  let minutes = new Date().getMinutes()
+  let seconds = new Date().getSeconds()
+
+  // hours
+  if (hoursContainer.innerHTML != hours) {
+
+    function addAnimationHours() {
+      hoursContainer.classList.add('clock__anim');
+      setTimeout(() => {  
+        hoursContainer.classList.remove('clock__anim'); 
+      }, 950);
+    }
+
+    if (hours < 10) {
+      hoursContainer.innerHTML = `0${hours}`;
+      addAnimationHours();
+    } else {
+      secondsContainer.innerHTML = hours;
+      addAnimationHours();
+    }
+  } 
+
+  // minutes
+  if (minutesContainer.innerHTML != minutes) {
+
+    function addAnimationMinutes() {
+      minutesContainer.classList.add('clock__anim');
+      setTimeout(() => {  
+        minutesContainer.classList.remove('clock__anim'); 
+      }, 950);
+    }
+
+    if (minutes < 10) {
+      minutesContainer.innerHTML = `0${minutes}`;
+      addAnimationMinutes();
+    } else {
+      minutesContainer.innerHTML = minutes;
+      addAnimationMinutes();
+    }
+  } 
+
+  // seconds
+  if (secondsContainer.innerHTML != seconds) {
+
+    function addAnimationSec() {
+      secondsContainer.classList.add('clock__anim');
+      setTimeout(() => {  
+        secondsContainer.classList.remove('clock__anim'); 
+      }, 950);
+    }
+
+    if (seconds < 10) {
+      secondsContainer.innerHTML = `0${seconds}`;
+      addAnimationSec();
+    } else {
+      secondsContainer.innerHTML = seconds;
+      addAnimationSec();
+    }
+  } 
+}
+
 
 function getCurrentDateString() {
   let dateWeek = ["Sunday", 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -29,27 +109,27 @@ function getCurrentDateString() {
 function getCurrentHelloString() {
 
   if (hours > 23 || hours < 6) {
-    return 'Good night,&thinsp;&thinsp;'
+    return 'Good&thinsp;night,&thinsp;&thinsp;'
   }
 
   if (hours > 5 && hours < 11) {
-    return 'Good morning,&thinsp;&thinsp;'
+    return 'Good&thinsp;morning,&thinsp;&thinsp;'
   }
 
   if (hours > 10 && hours < 20) {
-    return 'Good afternoon,&thinsp;&thinsp;'
+    return 'Good&thinsp;afternoon,&thinsp;&thinsp;'
   }
 
   if (hours > 19 || hours < 0) {
-    return 'Good evening,&thinsp;&thinsp;'
+    return 'Good&thinsp;evening,&thinsp;&thinsp;'
   }
 }
-clock.innerHTML = getCurrentTimeString()
+// clock.innerHTML = getCurrentTimeString()
 date.innerHTML = getCurrentDateString()
 helloText.innerHTML = getCurrentHelloString()
 
 setInterval(
-  () => clock.innerHTML = getCurrentTimeString(), 1000
+  () => getCurrentTimeString(), 1000
 );
 
 setInterval(

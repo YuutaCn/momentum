@@ -1,0 +1,1 @@
+clockAndDate = document.querySelector('#clock')

@@ -4,30 +4,30 @@
 }
 
 .settings {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border: none;
   border-radius: 50%;
-  background-color: rgba(175, 175, 175, 0.4);
+  background-color: rgba(29, 51, 74, 0.4);
   transition: all 700ms ease-out;
   overflow: hidden;
-  cursor: pointer;
+  cursor: pointer;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0px 0px 0px #000;
 }
 
 .settings:hover {
-  background-color: rgba(175, 175, 175, 1);
-  transform: scale(1.05, 1.05);
+  background-color: var(--clock-backGround);
+  transform: scale(1.07, 1.07);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.505), inset 0px 0px 0px #000;
 }
 
 
 
 .settings__svg {
-  transition: all 2s ease-out;
+  transition: all 1.2s ease-out;
 }
 
 .settings__svg:hover {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
 }
 
 

@@ -43,24 +43,28 @@
     height: 0px;
     background-color: var(--modal-backGround);
     box-shadow:  var(--modal-shadow);
+    text-indent: -999em;
   }
   25% {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     background-color: var(--modal-backGround);
     box-shadow:  var(--modal-shadow);
+    text-indent: -999em;
   }
   50% {
-    width: 60px;
+    width: 100px;
     height: 80%;
     background-color: var(--modal-backGround);
     box-shadow:  var(--modal-shadow);
+    text-indent: -999em;
   }
   100% {
     width: 650px;
     height: 80%;
     background-color: var(--modal-backGround);
     box-shadow:  var(--modal-shadow);
+    text-indent: 0em;
   }
 }
 

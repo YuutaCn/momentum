@@ -5,8 +5,10 @@
   --white-08: rgba(255, 255, 255, 0.8);
   --white-03: rgba(255, 255, 255, 0.3);
   --placeholder-color: rgb(234, 234, 234);
-  --modal-backGround: #060d2e;
+  --modal-backGround: rgba(29, 51, 74, 0.7);
   --modal-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
+  --clock-backGround: rgb(29, 51, 74);
+  --clock-perrent: rgba(29, 51, 74, 0.3);
 }
 
 html {
