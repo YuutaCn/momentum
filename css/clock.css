@@ -18,8 +18,11 @@
   justify-content: center;
   align-items: center;
   background: var(--clock-perrent);
+  visibility: visible;
+  opacity: 1;
   padding: 20px 5px 10px 5px;
   border-radius: 24px;
+  visibility: visible;
 }
 
 .clock {
