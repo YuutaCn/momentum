@@ -77,6 +77,7 @@ function getCurrentTimeString() {
 
     function addAnimationSec() {
       secondsContainer.classList.add('clock__anim');
+      
       setTimeout(() => {  
         secondsContainer.classList.remove('clock__anim'); 
       }, 950);

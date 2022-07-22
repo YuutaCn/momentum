@@ -69,24 +69,16 @@
   animation: swipeTime 950ms infinite ease-out;
 }
 
+
 @keyframes swipeTime {
   0% {
     transform: scale(1, 1);
   }
 
   50% {
-    transform: scale(0.98, 0.98);
+    transform: scale(0.995, 0.995);
     background-color: rgb(27, 48, 72);
   } 
-  /* 54% {
-    transform: scale(0.97, 0.97);
-  }
-  58% {
-    transform: scale(0.97, 0.97);
-  } 
-  80% {
-    transform: scale(0.97, 0.97);
-  }  */
 
   100% {
     transform: scale(1, 1);
