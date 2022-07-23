@@ -80,6 +80,12 @@
   color: var(--white);
 }
 
+.settings-list__li_bg {
+  font-size: 16;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
 .settings-list__hr {
   justify-content: center;
   align-items: center;

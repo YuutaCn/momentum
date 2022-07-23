@@ -105,14 +105,11 @@ let updateNumberMinus = () => {
     i -= 1;
     localStorage.setItem('slideNumber', `${i + 1}`);
   }
-  console.log(localStorage.getItem('slideNumber'));
-  console.log(i);
   return i
 }
   
 function getCurrentSlidePreset() {
   let hourses = new Date().getHours();
-  hourses
   if (hourses > 23 || hourses < 6) {
     slidePreset = slideNightPresetImg;
     return slidePreset
@@ -210,7 +207,9 @@ let autoPlusSlide = () => {
   }, 2700);
 };
 
-setInterval(() => {
-  autoPlusSlide();
-  console.log('отработал');
-}, 1 * 100 * 60 );
+
+if (localStorage.getItem('AutoBtnOp') = 'enabled') {
+  setInterval(() => {
+    autoPlusSlide();
+  }, 20 * 100 * 60 * 60);
+}

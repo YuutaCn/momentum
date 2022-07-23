@@ -4,7 +4,7 @@ let hideClock = document.querySelector('.hide-clock')
 
 
 let updaterClock = () => {
-  if (localStorage.getItem('clockAndDateOp') == 'visible' || localStorage.getItem('clockAndDateOp') == null) {
+  if (localStorage.getItem('clockAndDateOp') != 'hide') {
     clockAndDate.style.transition = '700ms';
     clockAndDate.style.opacity = '1';
     clockAndDate.style.visibility = 'visible';
@@ -54,7 +54,7 @@ let hideGithub = document.querySelector('.hide-github')
 
 
 let updaterGithub = () => {
-  if (localStorage.getItem('githubIdOp') == 'visible' || localStorage.getItem('githubIdOp') == null) {
+  if (localStorage.getItem('githubIdOp') != 'hidden') {
     githubId.style.transition = '700ms';
     githubId.style.opacity = '1';
     githubId.style.visibility = 'visible';
@@ -95,5 +95,46 @@ hideGithub.addEventListener('click', (e) => {
     localStorage.setItem('githubIdOp', 'hidden');
     updaterGithub();
   }
-
 });
+
+
+// Auto Background
+let autoBtn = document.querySelector('.autoBg');
+
+let autoBg = () => {
+  if (localStorage.getItem('autoBtnOp') != 'disabled') {
+    autoBtn.innerHTML = 'Enable'
+    autoBtn.style.transition = '700ms'
+    autoBtn.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
+    autoBtn.onmouseover = function () {
+      autoBtn.style.background = "rgb(36, 36, 36)";
+    };
+    autoBtn.onmouseleave = function () {
+      autoBtn.style.background = "rgb(18, 18, 18)";
+    }
+  } else {
+    autoBtn.innerHTML = 'Disable';
+    autoBtn.style.transition = '700ms'
+    autoBtn.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
+    autoBtn.onmouseover = function () {
+      autoBtn.style.background = "rgb(36, 36, 36)";
+    };
+    autoBtn.onmouseleave = function () {
+      autoBtn.style.background = "rgb(18, 18, 18)";
+    };
+  }
+}
+
+autoBg();
+
+autoBtn.addEventListener('click', (e) => {
+  console.log('Click 0');
+  if (localStorage.getItem('autoBtnOp') == 'enabled') {
+    localStorage.setItem('autoBtnOp', 'disabled');
+    autoBg();
+  } else {
+    localStorage.setItem('autoBtnOp', 'enabled');
+    autoBg();
+  }
+});
+

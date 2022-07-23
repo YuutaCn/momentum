@@ -36,14 +36,12 @@ function getCurrentTimeString() {
 
   // hours
   if (hoursContainer.innerHTML != hours) {
-
     function addAnimationHours() {
       hoursContainer.classList.add('clock__anim');
       setTimeout(() => {  
         hoursContainer.classList.remove('clock__anim'); 
       }, 950);
     }
-
     if (hours < 10) {
       hoursContainer.innerHTML = `0${hours}`;
       addAnimationHours();
@@ -55,14 +53,12 @@ function getCurrentTimeString() {
 
   // minutes
   if (minutesContainer.innerHTML != minutes) {
-
     function addAnimationMinutes() {
       minutesContainer.classList.add('clock__anim');
       setTimeout(() => {  
         minutesContainer.classList.remove('clock__anim'); 
       }, 950);
     }
-
     if (minutes < 10) {
       minutesContainer.innerHTML = `0${minutes}`;
       addAnimationMinutes();
@@ -74,15 +70,12 @@ function getCurrentTimeString() {
 
   // seconds
   if (secondsContainer.innerHTML != seconds) {
-
     function addAnimationSec() {
       secondsContainer.classList.add('clock__anim');
-      
       setTimeout(() => {  
         secondsContainer.classList.remove('clock__anim'); 
       }, 950);
     }
-
     if (seconds < 10) {
       secondsContainer.innerHTML = `0${seconds}`;
       addAnimationSec();
@@ -96,36 +89,29 @@ function getCurrentTimeString() {
 
 function getCurrentDateString() {
   let dateWeek = ["Sunday", 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
   let dateMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
                 'August', 'September', 'October', 'November', 'December'];
-
   let week = new Date().getDay();
-
   let month = new Date().getMonth();
-
   return `${dateWeek[week]}, ${dateMonth[month]} ${new Date().getDate()}`
 }
 
 function getCurrentHelloString() {
-
+  let hours = new Date().getHours();
   if (hours > 23 || hours < 6) {
     return 'Good&thinsp;night,&thinsp;&thinsp;'
   }
-
   if (hours > 5 && hours < 11) {
     return 'Good&thinsp;morning,&thinsp;&thinsp;'
   }
-
   if (hours > 10 && hours < 20) {
     return 'Good&thinsp;afternoon,&thinsp;&thinsp;'
   }
-
   if (hours > 19 || hours < 0) {
     return 'Good&thinsp;evening,&thinsp;&thinsp;'
   }
 }
-// clock.innerHTML = getCurrentTimeString()
+
 date.innerHTML = getCurrentDateString()
 helloText.innerHTML = getCurrentHelloString()
 
@@ -138,5 +124,5 @@ setInterval(
 );
 
 setInterval(
-  () => helloText.innerHTML = getCurrentHelloString(), 50000
+  () => helloText.innerHTML = getCurrentHelloString(), 2000
 );
