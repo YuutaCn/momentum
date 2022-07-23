@@ -48,7 +48,7 @@ function getCurrentTimeString() {
       hoursContainer.innerHTML = `0${hours}`;
       addAnimationHours();
     } else {
-      secondsContainer.innerHTML = hours;
+      hoursContainer.innerHTML = hours;
       addAnimationHours();
     }
   } 

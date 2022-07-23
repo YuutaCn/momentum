@@ -1,3 +1,4 @@
+// Watch
 let clockAndDate = document.querySelector('#clock')
 let hideClock = document.querySelector('.hide-clock')
 
@@ -10,11 +11,11 @@ let updaterClock = () => {
     hideClock.innerHTML = 'Show'
     hideClock.style.transition = '700ms'
     hideClock.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
-    hideClock.onmouseover = function() {
-    hideClock.style.background= "rgb(36, 36, 36)";
+    hideClock.onmouseover = function () {
+      hideClock.style.background = "rgb(36, 36, 36)";
     };
-    hideClock.onmouseleave = function() {
-    hideClock.style.background= "rgb(18, 18, 18)";
+    hideClock.onmouseleave = function () {
+      hideClock.style.background = "rgb(18, 18, 18)";
     }
   } else {
     clockAndDate.style.transition = '700ms';
@@ -23,11 +24,11 @@ let updaterClock = () => {
     hideClock.innerHTML = 'Hide';
     hideClock.style.transition = '700ms'
     hideClock.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
-    hideClock.onmouseover = function() {
-    hideClock.style.background= "rgb(36, 36, 36)";
+    hideClock.onmouseover = function () {
+      hideClock.style.background = "rgb(36, 36, 36)";
     };
-    hideClock.onmouseleave = function() {
-    hideClock.style.background= "rgb(18, 18, 18)";
+    hideClock.onmouseleave = function () {
+      hideClock.style.background = "rgb(18, 18, 18)";
     };
   }
 }
@@ -35,14 +36,64 @@ let updaterClock = () => {
 updaterClock();
 
 
-  hideClock.addEventListener('click', (e) => {
-    console.log('Click 0');
-    if (localStorage.getItem('clockAndDateOp') == 'hidden') {
-      localStorage.setItem('clockAndDateOp', 'visible');
-      updaterClock();
-    } else {
-      localStorage.setItem('clockAndDateOp', 'hidden');
-      updaterClock();
+hideClock.addEventListener('click', (e) => {
+  console.log('Click 0');
+  if (localStorage.getItem('clockAndDateOp') == 'hidden') {
+    localStorage.setItem('clockAndDateOp', 'visible');
+    updaterClock();
+  } else {
+    localStorage.setItem('clockAndDateOp', 'hidden');
+    updaterClock();
+  }
+
+});
+
+// GitHub logo
+let githubId = document.querySelector('.github-btn')
+let hideGithub = document.querySelector('.hide-github')
+
+
+let updaterGithub = () => {
+  if (localStorage.getItem('githubIdOp') == 'visible' || localStorage.getItem('githubIdOp') == null) {
+    githubId.style.transition = '700ms';
+    githubId.style.opacity = '1';
+    githubId.style.visibility = 'visible';
+    hideGithub.innerHTML = 'Show'
+    hideGithub.style.transition = '700ms'
+    hideGithub.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
+    hideGithub.onmouseover = function () {
+      hideGithub.style.background = "rgb(36, 36, 36)";
+    };
+    hideGithub.onmouseleave = function () {
+      hideGithub.style.background = "rgb(18, 18, 18)";
     }
-    
-  });
+  } else {
+    githubId.style.transition = '700ms';
+    githubId.style.opacity = '0';
+    githubId.style.visibility = 'hidden';
+    hideGithub.innerHTML = 'Hide';
+    hideGithub.style.transition = '700ms'
+    hideGithub.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
+    hideGithub.onmouseover = function () {
+      hideGithub.style.background = "rgb(36, 36, 36)";
+    };
+    hideGithub.onmouseleave = function () {
+      hideGithub.style.background = "rgb(18, 18, 18)";
+    };
+  }
+}
+
+updaterGithub();
+
+
+hideGithub.addEventListener('click', (e) => {
+  console.log('Click 0');
+  if (localStorage.getItem('githubIdOp') == 'hidden') {
+    localStorage.setItem('githubIdOp', 'visible');
+    updaterGithub();
+  } else {
+    localStorage.setItem('githubIdOp', 'hidden');
+    updaterGithub();
+  }
+
+});

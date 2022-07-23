@@ -1,0 +1,66 @@
+.body-background {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.swiper-btn {
+  position: fixed;
+  z-index: 9999;
+  bottom: 50%;
+  width: 100%;
+  height: 0px;
+  display: flex;
+  flex-direction: row;
+  background: none;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  color: #a3a3a3;
+}
+
+.left-arrow, 
+.right-arrow {
+  position: relative;
+  background: none;
+  border: none;
+  top: 5px;
+  width: 80px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.left-arrow {
+  align-items: start;
+}
+
+.right-arrow {
+  align-items: end;
+}
+
+.left-arrow__up,
+.left-arrow__down,
+.right-arrow__up,
+.right-arrow__down {
+  position: relative;
+  z-index: 1000;
+  bottom: 20px;
+  width: 50%;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.left-arrow__up,
+.right-arrow__up {
+  position: relative;
+  top: 9.5px;
+}
+

@@ -40,8 +40,12 @@ input::-webkit-search-results-decoration {
   left: 0;
   font-family: 'Magra', 'Red Hat Text', 'Aleo', sans-serif;
   position: relative;
-  background-image: url(../assets/swiper/evening/11.jpg);
+  z-index: 1;
+  /* background: url(../assets/swiper/1-night/1.jpg); */
   background-size: cover;
+  background-repeat: no-repeat;
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
 }
 
 ::-webkit-scrollbar { /* chrome based */
@@ -52,6 +56,8 @@ input::-webkit-search-results-decoration {
 
 
 .backGroundShadow {
+  position: relative;
+  z-index: 3;
   background: radial-gradient(circle farthest-corner at top, rgba(0, 0, 0, 0.2), var(--gradietColor));
 }
 

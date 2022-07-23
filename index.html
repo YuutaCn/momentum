@@ -1,4 +1,4 @@
-<html lang="zxx">
+<html lang="en-us">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -40,6 +40,10 @@
     <!-- fonts -->
     <link rel="stylesheet" href="css/popups.css" />
     <!-- popup -->
+    <link rel="stylesheet" href="css/github.css" />
+    <!-- settings -->
+    <link rel="stylesheet" href="css/backGroundSwiper.css" />
+    <!-- settings -->
     <link rel="stylesheet" href="css/settings.css" />
     <!-- settings -->
 
@@ -55,63 +59,64 @@
     <title>Momentum</title>
   </head>
 
-
-
-
-
-
-
   <body class="body">
+
+    <div class="body-background"></div>
 
     <div class="modals">
       <div class="modal-overlay">
         <div class="settings-popup modal" data-target="settings">
-          <h1 class="setting-popup__name-menu red-hat-text">
+          <h2 class="setting-popup__name-menu red-hat-text">
             Settings&nbsp;Menu
-          </h3>
-          <hr>
+          </h2>
+          <hr />
           <div class="settings-list">
             <ul class="settings-list__ul">
-              <li class="settings-list__li red-hat-text">Reset&nbsp;my&nbsp;Name
+              <li class="settings-list__li red-hat-text">
+                Reset&nbsp;my&nbsp;Name
                 <div class="settings-list__hr"></div>
                 <ul class="settings-list__ul-button">
                   <li class="settings-list__li-button">
-                    <button class="settings-list__button button-name-reset red-hat-text">Reset</button>
+                    <button
+                      class="settings-list__button button-name-reset red-hat-text"
+                    >
+                      Reset
+                    </button>
                   </li>
                 </ul>
               </li>
-              
-              <li class="settings-list__li red-hat-text">Hide&nbsp;the&nbsp;clock
+              <li class="settings-list__li red-hat-text">
+                Watch
                 <div class="settings-list__hr"></div>
                 <ul class="settings-list__ul-button">
                   <li class="settings-list__li-button">
-                    <button class="settings-list__button hide-clock red-hat-text">Hide</button>
+                    <button
+                      class="settings-list__button hide-clock red-hat-text"
+                    ></button>
                   </li>
                 </ul>
               </li>
-
-
-              <li class="settings-list__li red-hat-text">Hide&nbsp;the&nbsp;date
+              <li class="settings-list__li red-hat-text">
+                GitHub&nbsp;logo
                 <div class="settings-list__hr"></div>
                 <ul class="settings-list__ul-button">
                   <li class="settings-list__li-button">
-                    <button class="settings-list__button hide-date red-hat-text">Hide</button>
+                    <button
+                      class="settings-list__button hide-github red-hat-text"
+                    ></button>
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
-
       </div>
     </div>
 
     <div class="backGroundShadow">
-
       <header class="header container"></header>
 
       <main class="main container">
-
         <div class="clocks" id="clock">
           <div class="clock">
             <div class="clock__hr"></div>
@@ -123,30 +128,67 @@
 
         <div class="main__hello">
           <h1 class="main__helloText red-hat-text" id="helloText"></h1>
-          <form class="form-name-input"action="" method="get">
-            <input class="form-name-input__input red-hat-text" 
-                  type="text" 
-                  name="userName" 
-                  id="userName" 
-                  placeholder="Guest">
+          <form class="form-name-input" method="get">
+            <input
+              class="form-name-input__input red-hat-text"
+              type="text"
+              name="userName"
+              id="userName"
+              placeholder="Guest"
+            />
             <button class="form-name-input__button" type="submit"></button>
           </form>
           <p class="main__userName red-hat-text"></p>
         </div>
-
       </main>
 
       <footer class="footer container">
-
         <button class="settings btn-on-click btns" data-path="settings">
-          <img class='settings__svg' src="./assets/svg/settings.svg" alt="settings.svg" width="70">
+          <img
+            class="settings__svg"
+            src="./assets/svg/settings.svg"
+            alt="settings.svg"
+            width="70"
+          />
         </button>
 
+        <button class="github-btn btn-on-click" id="github">
+          <a
+            href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fyuutacn"
+            target="_blank"
+          >
+            <div class="github-btn__container-svg">
+              <img
+                class="github-btn__svg-1"
+                src="./assets/svg/github.svg"
+                alt="github-link"
+              />
+              <img
+                class="github-btn__svg-2"
+                src="./assets/svg/github.svg"
+                alt="github-link"
+              />
+            </div>
+          </a>
+        </button>
       </footer>
+
+      <aside class="swiper-btn container">
+        <button class="left-arrow">
+          <div class="left-arrow__up"></div>
+          <div class="left-arrow__down"></div>
+        </button>
+        <button class="right-arrow">
+          <div class="right-arrow__up"></div>
+          <div class="right-arrow__down"></div>
+        </button>
+      </aside>
 
       <script src="./js/userName.js"></script>
       <script src="./js/clock.js"></script>
       <script src="./js/popup.js"></script>
+      <script src="./js/github.js"></script>
+      <script src="./js/backGroudSwiper.js"></script>
       <script src="./js/settings.js"></script>
     </div>
   </body>
