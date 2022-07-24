@@ -41,9 +41,16 @@
             "src": "/android-chrome-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-384x384.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
+
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    "theme_color": "#1d334acc",
+    "background_color": "#1d334acc",
+    "display": "fullscreen",
+    "orientation": "landscape"
 }

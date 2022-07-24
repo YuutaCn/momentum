@@ -27,7 +27,7 @@
       sizes="16x16"
       href="assets/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="./json/manifest.json" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 
     <link rel="stylesheet" href="css/normalize.css" />
@@ -52,11 +52,11 @@
     <meta name="apple-mobile-web-app-title" content="Momentum" />
     <meta name="application-name" content="Momentum" />
     <meta name="msapplication-TileColor" content="#a1e7fe" />
+    <meta name="theme-color" content="rgba(29, 51, 74, 0.8)"/>
     <meta
       name="msapplication-TileImage"
       content="assets/favicon/mstile-144x144.png"
     />
-    <meta name="theme-color" content="#ffffff" />
 
     <title>Momentum</title>
   </head>
@@ -81,6 +81,7 @@
                   <li class="settings-list__li-button">
                     <button
                       class="settings-list__button button-name-reset red-hat-text"
+                      name="reset my name"
                     >
                       Reset
                     </button>
@@ -94,28 +95,55 @@
                   <li class="settings-list__li-button">
                     <button
                       class="settings-list__button hide-clock red-hat-text"
+                      name="hide clock"
                     ></button>
                   </li>
                 </ul>
               </li>
               <li class="settings-list__li red-hat-text">
-                GitHub&nbsp;logo
+                GitHub&nbsp;Logo
                 <div class="settings-list__hr"></div>
                 <ul class="settings-list__ul-button">
                   <li class="settings-list__li-button">
                     <button
                       class="settings-list__button hide-github red-hat-text"
+                      name="hide github"
                     ></button>
                   </li>
                 </ul>
               </li>
               <li class="settings-list__li red-hat-text">
-                Automatic&nbsp;background&nbsp;change
+                Automatic&nbsp;Background&nbsp;Change
                 <div class="settings-list__hr"></div>
                 <ul class="settings-list__ul-button">
                   <li class="settings-list__li-button">
                     <button
                       class="settings-list__button autoBg red-hat-text"
+                      name="auto background"
+                    ></button>
+                  </li>
+                </ul>
+              </li>
+              <li class="settings-list__li red-hat-text">
+                Quotes
+                <div class="settings-list__hr"></div>
+                <ul class="settings-list__ul-button">
+                  <li class="settings-list__li-button">
+                    <button
+                      class="settings-list__button quotes-settings red-hat-text"
+                      name="hide quotes"
+                    ></button>
+                  </li>
+                </ul>
+              </li>
+              <li class="settings-list__li red-hat-text">
+                Welcome&nbsp;Text
+                <div class="settings-list__hr"></div>
+                <ul class="settings-list__ul-button">
+                  <li class="settings-list__li-button">
+                    <button
+                      class="settings-list__button welcome-settings red-hat-text"
+                      name="hide welcome text"
                     ></button>
                   </li>
                 </ul>
@@ -154,14 +182,14 @@
               id="userName"
               placeholder="Guest"
             />
-            <button class="form-name-input__button" type="submit"></button>
+            <button class="form-name-input__button" type="submit" name="name input"></button>
           </form>
           <p class="main__userName red-hat-text"></p>
         </div>
       </main>
 
       <footer class="footer container">
-        <button class="settings btn-on-click btns" data-path="settings">
+        <button class="settings btn-on-click btns" name="settings" data-path="settings">
           <img
             class="settings__svg"
             src="./assets/svg/settings.svg"
@@ -171,14 +199,14 @@
         </button>
 
         <div class="quotes">
-          <button class="quotes-btn btn-on-click">
+          <button class="quotes-btn btn-on-click" name="update quotes">
             <img class="quotes-btn__svg" src="./assets/svg/reload.svg" alt="quotes-btn__svg" height="40">
           </button>
           <div class="quotes__text"></div>
           <div class="quotes__author"></div>
         </div>
 
-        <button class="github-btn btn-on-click" id="github">
+        <button class="github-btn btn-on-click" id="github" name="github">
           <a
             href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fyuutacn"
             target="_blank"
@@ -200,11 +228,11 @@
       </footer>
 
       <aside class="swiper-btn container">
-        <button class="left-arrow">
+        <button class="left-arrow" name="left arrow background">
           <div class="left-arrow__up"></div>
           <div class="left-arrow__down"></div>
         </button>
-        <button class="right-arrow">
+        <button class="right-arrow" name="right arrow background">
           <div class="right-arrow__up"></div>
           <div class="right-arrow__down"></div>
         </button>

@@ -1,36 +1,32 @@
-let requestQuotes = new XMLHttpRequest();
-let quotes = {};
-requestQuotes.open('GET', './json/quotes.json', true);
-requestQuotes.responseType = 'json'
-requestQuotes.send();
-requestQuotes.onload = function () {
-  quotes = requestQuotes.response;
-  let getRandomArbitrary = () => {
-    let i = Math.random() * (22 - 1) + 1;
-    i = Math.round(i)
-    console.log(i)
-    return Number(i)
-  }
-  quotesText.innerHTML = `&mdash; ${quotes[i].quotesText}`
-  quotesAuthor.innerHTML = `&laquo;${quotes[i].author}&raquo;`
-};
+let indexQuote = 0;
+let getRandomArbitrary = () => {
+  indexQuote = Math.random() * (22 - 1) + 1;
+  indexQuote = Math.round(indexQuote)
+  return Number(indexQuote)
+}
 
 let quotesText = document.querySelector('.quotes__text');
 let quotesAuthor = document.querySelector('.quotes__author');
 let quotesBtn = document.querySelector('.quotes-btn');
+let requestQuotes = new XMLHttpRequest();
+let quotes = {};
+
+requestQuotes.open('GET', './json/quotes.json', true);
+requestQuotes.responseType = 'json'
+requestQuotes.send();
+requestQuotes.onload = function () {
+  getRandomArbitrary();
+  quotes = requestQuotes.response;
+  quotesText.innerHTML = `&mdash; ${quotes[indexQuote].quotesText}`
+  quotesAuthor.innerHTML = `&laquo;${quotes[indexQuote].author}&raquo;`
+};
+
 
 
 let quotesInHTML = () => {
-  let i = 0;
-  let getRandomArbitrary = () => {
-    i = Math.random() * (22 - 1) + 1;
-    i = Math.round(i)
-    console.log(i)
-    return Number(i)
-  }
   getRandomArbitrary();
-  quotesText.innerHTML = `&mdash; ${quotes[i].quotesText}`
-  quotesAuthor.innerHTML = `&laquo;${quotes[i].author}&raquo;`
+  quotesText.innerHTML = `&mdash; ${quotes[indexQuote].quotesText}`
+  quotesAuthor.innerHTML = `&laquo;${quotes[indexQuote].author}&raquo;`
 }
 
 // Button

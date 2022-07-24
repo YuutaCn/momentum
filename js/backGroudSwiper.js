@@ -137,13 +137,13 @@ if (localStorage.getItem('slideNumber') === null || localStorage.getItem('slideN
   bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
   bodyBackGroundContainer.style.opacity = '1';
   bodyBackGroundContainer.style.visibility = 'visible';
-  bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
+  bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.webp) no-repeat center`;
   bodyBackGroundContainer.style.backgroundSize = 'cover';
 } else {
   bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
   bodyBackGroundContainer.style.opacity = '1';
   bodyBackGroundContainer.style.visibility = 'visible';
-  bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
+  bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.webp) no-repeat center`;
   bodyBackGroundContainer.style.backgroundSize = 'cover';
 }
 
@@ -205,7 +205,7 @@ rightButton.addEventListener('click', (e) => {
   updateNumberPlus()
   localStorage.setItem('slideNumber', `${i - 1}`)
   let requestBackground = new XMLHttpRequest();
-  requestBackground.open('GET', `./${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg`, true);
+  requestBackground.open('GET', `./${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.webp`, true);
   requestBackground.responseType = 'document'
   requestBackground.send();
   loadedDotToRight()
@@ -244,7 +244,7 @@ leftButton.addEventListener('click', (e) => {
   updateNumberMinus()
   localStorage.setItem('slideNumber', `${i + 1}`)
   let requestBackground = new XMLHttpRequest();
-  requestBackground.open('GET', `./${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg`, true);
+  requestBackground.open('GET', `./${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.webp`, true);
   requestBackground.responseType = 'document'
   requestBackground.send();
   loadedDotToLeft()
@@ -283,7 +283,7 @@ leftButton.addEventListener('click', (e) => {
 let autoPlusSlide = () => {
   updateNumberPlus()
   localStorage.setItem('slideNumber', `${i - 1}`)
-  bodyBackGround.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
+  bodyBackGround.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.webp) no-repeat center`;
   bodyBackGround.style.backgroundSize = 'cover';
   setTimeout(() => {
     bodyBackGroundContainer.style.transition = 'all 4000ms ease-in';
@@ -294,7 +294,7 @@ let autoPlusSlide = () => {
     bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
     bodyBackGroundContainer.style.opacity = '1';
     bodyBackGroundContainer.style.visibility = 'visible';
-    bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
+    bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.webp) no-repeat center`;
     bodyBackGroundContainer.style.backgroundSize = 'cover';
   }, 5000);
 };

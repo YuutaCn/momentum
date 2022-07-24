@@ -1,11 +1,13 @@
 .quotes {
    display: flex;
+   width: 70%;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    font-size: 16px;
    font-family: 'Arial';
    font-weight: 300;
+   text-align: center;
    color: rgba(227, 227, 227, 0.9);
    gap: 5px;
 }
