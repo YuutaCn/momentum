@@ -27,8 +27,6 @@ if (hours < 10) {
 minutesContainer.innerHTML = `00`
 secondsContainer.innerHTML = `00`
 
-
-
 function getCurrentTimeString() {
   let hours = new Date().getHours()
   let minutes = new Date().getMinutes()

@@ -67,7 +67,7 @@
 .loaded-background {
   display: flex;
   flex-direction: row;
-  color: var(--white);
+  color: rgba(255, 255, 255, 0.4);
   gap: 10px;
   margin: 5px;
   font-size: 24px;
