@@ -13,16 +13,16 @@ leftArrowDown.style.transform = 'rotate(-45deg)';
 rightArrowUp.style.transform = 'rotate(-45deg)';
 rightArrowDown.style.transform = 'rotate(45deg)';
 
-leftButton.onmouseover = function() {
+leftButton.onmouseover = function () {
   leftArrowUp.style.transition = 'all 500ms ease-out'
   leftArrowDown.style.transition = 'all 500ms ease-out'
   leftArrowUp.style.height = '4px';
   leftArrowDown.style.height = '4px';
   leftArrowUp.style.transform = 'rotate(42deg) translateY(-0.6px)';
   leftArrowDown.style.transform = 'rotate(-42deg) translateY(0.6px)';
-  };
+};
 
-leftButton.onmouseleave = function() {
+leftButton.onmouseleave = function () {
   leftArrowUp.style.transition = 'all 500ms ease-out'
   leftArrowDown.style.transition = 'all 500ms ease-out'
   leftArrowUp.style.height = '3px';
@@ -31,16 +31,16 @@ leftButton.onmouseleave = function() {
   leftArrowDown.style.transform = 'rotate(-45deg)';
 };
 
-rightButton.onmouseover = function() {
+rightButton.onmouseover = function () {
   rightArrowUp.style.transition = 'all 500ms ease-out'
   rightArrowDown.style.transition = 'all 500ms ease-out'
   rightArrowUp.style.height = '4px';
   rightArrowDown.style.height = '4px';
   rightArrowUp.style.transform = 'rotate(-42deg) translateY(-0.6px)';
   rightArrowDown.style.transform = 'rotate(42deg) translateY(0.6px)';
-  };
+};
 
-rightButton.onmouseleave = function() {
+rightButton.onmouseleave = function () {
   rightArrowUp.style.transition = 'all 500ms ease-out'
   rightArrowDown.style.transition = 'all 500ms ease-out'
   rightArrowUp.style.height = '3px';
@@ -107,7 +107,7 @@ let updateNumberMinus = () => {
   }
   return i
 }
-  
+
 function getCurrentSlidePreset() {
   let hourses = new Date().getHours();
   if (hourses > 23 || hourses < 6) {
@@ -132,55 +132,42 @@ function getCurrentSlidePreset() {
 if (localStorage.getItem('slideNumber') === null || localStorage.getItem('slideNumber') >= 20) {
   localStorage.setItem('slideNumber', `${1}`)
   bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
-    bodyBackGroundContainer.style.opacity = '1';
-    bodyBackGroundContainer.style.visibility = 'visible';
-    bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
-    bodyBackGroundContainer.style.backgroundSize = 'cover';
+  bodyBackGroundContainer.style.opacity = '1';
+  bodyBackGroundContainer.style.visibility = 'visible';
+  bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
+  bodyBackGroundContainer.style.backgroundSize = 'cover';
 } else {
   bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
-    bodyBackGroundContainer.style.opacity = '1';
-    bodyBackGroundContainer.style.visibility = 'visible';
-    bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
-    bodyBackGroundContainer.style.backgroundSize = 'cover';
+  bodyBackGroundContainer.style.opacity = '1';
+  bodyBackGroundContainer.style.visibility = 'visible';
+  bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
+  bodyBackGroundContainer.style.backgroundSize = 'cover';
 }
 
 rightButton.addEventListener('click', (e) => {
-
-  // let requestBackground = new XMLHttpRequest();
-  // let quotes = {};
-  // requestBackground.open('GET', './json/quotes.json', true);
-  // requestBackground.responseType = 'jpg'
-  // requestBackground.send();
-  // requestBackground.onload = function () {
-  //   quotes = requestQuotes.response;
-  //   let getRandomArbitrary = () => {
-  //     let i = Math.random() * (22 - 1) + 1;
-  //     i = Math.round(i)
-  //     console.log(i)
-  //     return Number(i)
-  //   }
-  //   quotesText.innerHTML = quotes[getRandomArbitrary()].quotesText
-  //   quotesAuthor.innerHTML = quotes[getRandomArbitrary()].author
-  // };
-
   updateNumberPlus()
   localStorage.setItem('slideNumber', `${i - 1}`)
-  bodyBackGround.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
-  bodyBackGround.style.backgroundSize = 'cover'
-  setTimeout(() => {
-    bodyBackGroundContainer.style.transition = 'all 2000ms ease-in';
+  let requestBackground = new XMLHttpRequest();
+  requestBackground.open('GET', `./${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg`, true);
+  requestBackground.responseType = 'document'
+  requestBackground.send();
+  requestBackground.onload = function () {
+    bodyBackGround.style.background = `url(${requestBackground.responseURL}) no-repeat center`;
+    bodyBackGround.style.backgroundSize = 'cover'
+    bodyBackGroundContainer.style.transition = 'all 2000ms ease-in 500ms';
     bodyBackGroundContainer.style.opacity = '0';
     bodyBackGroundContainer.style.visibility = 'hidden';
     rightButton.setAttribute('disabled', true);
-  }, 700);
-  setTimeout(() => {
-    rightButton.removeAttribute('disabled');
-    bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
-    bodyBackGroundContainer.style.opacity = '1';
-    bodyBackGroundContainer.style.visibility = 'visible';
-    bodyBackGroundContainer.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
-    bodyBackGroundContainer.style.backgroundSize = 'cover';
-  }, 2700);
+    setTimeout(() => {
+      rightButton.removeAttribute('disabled');
+      bodyBackGroundContainer.style.transition = 'all 0ms ease-in';
+      bodyBackGroundContainer.style.opacity = '1';
+      bodyBackGroundContainer.style.visibility = 'visible';
+      bodyBackGroundContainer.style.background = `url(${requestBackground.responseURL}) no-repeat center`;
+      bodyBackGroundContainer.style.backgroundSize = 'cover';
+    }, 2700);
+  }
+
 });
 
 leftButton.addEventListener('click', (e) => {
