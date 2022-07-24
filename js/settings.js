@@ -293,3 +293,54 @@ hideLoading.addEventListener('click', (e) => {
     updaterLoading();
   }
 });
+
+
+// Player
+let PlayerId = document.querySelector('.player')
+let hidePlayer = document.querySelector('.player-settings')
+
+
+let updaterPlayer = () => {
+  if (localStorage.getItem('PlayerIdOp') != 'hidden') {
+    PlayerId.style.transition = 'all 700ms ease-out';
+    PlayerId.style.opacity = '1';
+    PlayerId.style.visibility = 'visible';
+    PlayerId.style.transform = 'scale(1, 1)'
+    hidePlayer.innerHTML = 'Enable'
+    hidePlayer.style.transition = '700ms'
+    hidePlayer.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
+    hidePlayer.onmouseover = function () {
+      hidePlayer.style.background = "rgb(36, 36, 36)";
+    };
+    hidePlayer.onmouseleave = function () {
+      hidePlayer.style.background = "rgb(18, 18, 18)";
+    }
+  } else {
+    PlayerId.style.transition = 'all 700ms ease-in';
+    PlayerId.style.opacity = '0';
+    PlayerId.style.visibility = 'hidden';
+    PlayerId.style.transform = 'scale(0.8, 0.8)'
+    hidePlayer.innerHTML = 'Disable';
+    hidePlayer.style.transition = '700ms'
+    hidePlayer.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
+    hidePlayer.onmouseover = function () {
+      hidePlayer.style.background = "rgb(36, 36, 36)";
+    };
+    hidePlayer.onmouseleave = function () {
+      hidePlayer.style.background = "rgb(18, 18, 18)";
+    };
+  }
+}
+
+updaterPlayer();
+
+
+hidePlayer.addEventListener('click', (e) => {
+  if (localStorage.getItem('PlayerIdOp') == 'hidden') {
+    localStorage.setItem('PlayerIdOp', 'visible');
+    updaterPlayer();
+  } else {
+    localStorage.setItem('PlayerIdOp', 'hidden');
+    updaterPlayer();
+  }
+});

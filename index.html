@@ -46,13 +46,15 @@
     <!-- Background-->
     <link rel="stylesheet" href="css/quotes.css" />
     <!-- quotes -->
+    <link rel="stylesheet" href="css/player.css" />
+    <!-- player -->
     <link rel="stylesheet" href="css/settings.css" />
     <!-- settings -->
 
     <meta name="apple-mobile-web-app-title" content="Momentum" />
     <meta name="application-name" content="Momentum" />
     <meta name="msapplication-TileColor" content="#a1e7fe" />
-    <meta name="theme-color" content="rgba(29, 51, 74, 0.8)"/>
+    <meta name="theme-color" content="rgba(29, 51, 74, 0.8)" />
     <meta
       name="msapplication-TileImage"
       content="assets/favicon/mstile-144x144.png"
@@ -62,7 +64,6 @@
   </head>
 
   <body class="body">
-
     <div class="body-background"></div>
 
     <div class="modals">
@@ -160,6 +161,18 @@
                   </li>
                 </ul>
               </li>
+              <li class="settings-list__li red-hat-text">
+                Player
+                <div class="settings-list__hr"></div>
+                <ul class="settings-list__ul-button">
+                  <li class="settings-list__li-button">
+                    <button
+                      class="settings-list__button player-settings red-hat-text"
+                      name="hide loaded dots"
+                    ></button>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -167,7 +180,404 @@
     </div>
 
     <div class="backGroundShadow">
-      <header class="header container"></header>
+      <header class="header container">
+        <div class="player">
+          <div class="player__header">
+            <div class="player__img player__img--absolute slider">
+              <button
+                class="player__button player__button--absolute--nw playlist"
+              >
+                <img
+                  src="./assets/svg/playlist.svg"
+                  alt="playlist-icon"
+                />
+              </button>
+
+              <button
+                class="player__button player__button--absolute--center play"
+              >
+                <img
+                  src="./assets/svg/pause.svg"
+                  alt="play-icon"
+                />
+                <img
+                  src="./assets/svg/play.svg"
+                  alt="pause-icon"
+                />
+              </button>
+
+              <div class="slider__content">
+                <img
+                  class="img slider__img player__img"
+                  src="./assets/mp3/h-26.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="img slider__img player__img"
+                  src="http://physical-authority.surge.sh/imgs/2.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="img slider__img player__img"
+                  src="http://physical-authority.surge.sh/imgs/3.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="img slider__img player__img"
+                  src="./assets/mp3/minor.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="slider__img player__img img"
+                  src="./assets/mp3/patron.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="slider__img player__img img"
+                  src="./assets/mp3/utopiya-tekst.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="slider__img player__img img"
+                  src="./assets/mp3/снова я.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="slider__img player__img img"
+                  src="./assets/mp3/morgenshtern-skazal-rossii-spasibo-za-shans-nachat-vse-zanovo-slushat-1.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="slider__img player__img img"
+                  src="./assets/mp3/camry.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="img slider__img player__img"
+                  src="http://physical-authority.surge.sh/imgs/1.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="img slider__img player__img"
+                  src="http://physical-authority.surge.sh/imgs/4.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="img slider__img player__img"
+                  src="http://physical-authority.surge.sh/imgs/5.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="img slider__img player__img"
+                  src="http://physical-authority.surge.sh/imgs/6.jpg"
+                  alt="cover"
+                />
+                <img
+                  class="img slider__img player__img"
+                  src="http://physical-authority.surge.sh/imgs/7.jpg"
+                  alt="cover"
+                />
+              </div>
+            </div>
+
+            <div class="player__controls">
+              <button class="player__button back">
+                <img
+                  class="img"
+                  src="./assets/svg/back.svg"
+                  alt="back-icon"
+                />
+              </button>
+              <p class="player__context slider__context">
+                <strong class="slider__name"></strong>
+                <span class="player__title slider__title"></span>
+              </p>
+              <button class="player__button next">
+                <img
+                  class="img"
+                  src="./assets/svg/next.svg"
+                  alt="next-icon"
+                />
+              </button>
+              <div class="progres">
+                <div class="progres__filled"></div>
+              </div>
+            </div>
+          </div>
+          
+          <ul class="player__playlist list">
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="./assets/mp3/h-26.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name"
+                  >Numb</b>
+                <span class="flex">
+                  <span class="player__title">Linkin Park</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="./assets/mp3/Linkin_Park_-_Numb_b128f0d185.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="http://physical-authority.surge.sh/imgs/2.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">blinding lights</b>
+                <span class="flex">
+                  <span class="player__title">the weeknd</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="http://physical-authority.surge.sh/music/2.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="http://physical-authority.surge.sh/imgs/3.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">джованна</b>
+                <span class="flex">
+                  <span class="player__title">enrasta</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="http://physical-authority.surge.sh/music/3.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="./assets/mp3/minor.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">Minor</b>
+                <span class="flex">
+                  <span class="player__title">MiyaGi & Andy Panda</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="./assets/mp3/MiyaGi & Andy Panda - Minor.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="./assets/mp3/patron.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">Патрон</b>
+                <span class="flex">
+                  <span class="player__title">MiyaGi & Andy Panda</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="./assets/mp3/Miyagi & Andy Panda - Патрон.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="./assets/mp3/utopiya-tekst.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">Utopia</b>
+                <span class="flex">
+                  <span class="player__title">MiyaGi & Andy Panda</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="./assets/mp3/MiyaGi feat. Andy Panda - Utopia.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="./assets/mp3/снова я.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">Снова я напиваюсь</b>
+                <span class="flex">
+                  <span class="player__title">Slava Marlow</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="./assets/mp3/Slava Marlow - Снова Я Напиваюсь.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="./assets/mp3/morgenshtern-skazal-rossii-spasibo-za-shans-nachat-vse-zanovo-slushat-1.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">Почему?</b>
+                <span class="flex">
+                  <span class="player__title">Morgenshtern</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="./assets/mp3/MORGENSHTERN_Pochemu.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="./assets/mp3/camry.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">Camry 3.5</b>
+                <span class="flex">
+                  <span class="player__title">UncleFlexxx</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="./assets/mp3/UncleFlexxx - Camry 3.5.mp3"
+              ></audio>
+            </li>
+
+            <!-- add -->
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="http://physical-authority.surge.sh/imgs/1.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">no time</b>
+                <span class="flex">
+                  <span class="player__title">lastlings</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="http://physical-authority.surge.sh/music/1.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="http://physical-authority.surge.sh/imgs/4.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">a man</b>
+                <span class="flex">
+                  <span class="player__title">travis scott</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="http://physical-authority.surge.sh/music/4.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="http://physical-authority.surge.sh/imgs/5.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">unforgetting</b>
+                <span class="flex">
+                  <span class="player__title">zaxx</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="http://physical-authority.surge.sh/music/5.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="http://physical-authority.surge.sh/imgs/6.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name">waharan</b>
+                <span class="flex">
+                  <span class="player__title">Randall</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="http://physical-authority.surge.sh/music/6.mp3"
+              ></audio>
+            </li>
+
+            <li class="player__song">
+              <img
+                class="player__img img"
+                src="http://physical-authority.surge.sh/imgs/7.jpg"
+                alt="cover"
+              />
+              <p class="player__context">
+                <b class="player__song-name"
+                  >starlight</b>
+                <span class="flex">
+                  <span class="player__title">jai wolf</span>
+                  <span class="player__song-time"></span>
+                </span>
+              </p>
+              <audio
+                class="audio"
+                src="http://physical-authority.surge.sh/music/7.mp3"
+              ></audio>
+            </li>
+
+        </div>
+      </header>
 
       <main class="main container">
         <div class="loaded-background">
@@ -194,14 +604,22 @@
               id="userName"
               placeholder="Guest"
             />
-            <button class="form-name-input__button" type="submit" name="name input"></button>
+            <button
+              class="form-name-input__button"
+              type="submit"
+              name="name input"
+            ></button>
           </form>
           <p class="main__userName red-hat-text"></p>
         </div>
       </main>
 
       <footer class="footer container">
-        <button class="settings btn-on-click btns" name="settings" data-path="settings">
+        <button
+          class="settings btn-on-click btns"
+          name="settings"
+          data-path="settings"
+        >
           <img
             class="settings__svg"
             src="./assets/svg/settings.svg"
@@ -212,7 +630,12 @@
 
         <div class="quotes">
           <button class="quotes-btn btn-on-click" name="update quotes">
-            <img class="quotes-btn__svg" src="./assets/svg/reload.svg" alt="quotes-btn__svg" height="40">
+            <img
+              class="quotes-btn__svg"
+              src="./assets/svg/reload.svg"
+              alt="quotes-btn__svg"
+              height="40"
+            />
           </button>
           <div class="quotes__text"></div>
           <div class="quotes__author"></div>
@@ -256,6 +679,7 @@
       <script src="./js/github.js"></script>
       <script src="./js/backGroudSwiper.js"></script>
       <script src="./js/quotes.js"></script>
+      <script src="./js/player.js"></script>
       <script src="./js/settings.js"></script>
     </div>
   </body>
