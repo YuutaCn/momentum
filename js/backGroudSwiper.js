@@ -72,7 +72,6 @@ rightButton.addEventListener('click', (e) => {
 });
 
 
-
 // Background
 let i = Number(localStorage.getItem('slideNumber')) + 1;
 let bodyBackGround = document.querySelector('.body');

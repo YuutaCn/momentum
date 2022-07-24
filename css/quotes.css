@@ -1,0 +1,29 @@
+.quotes {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 16px;
+   font-family: 'Arial';
+   font-weight: 300;
+   color: var(--white);
+   gap: 5px;
+}
+
+.quotes-btn {
+  margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(29, 51, 74, 0.4);
+  overflow: hidden;
+  cursor: pointer;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0px 0px 0px #000;
+  transition: all 700ms ease-in-out;
+}
+
+.quotes-btn:hover {
+  background-color: var(--clock-backGround);
+  transform: scale(1.07, 1.07);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.505), inset 0px 0px 0px #000;
+}
