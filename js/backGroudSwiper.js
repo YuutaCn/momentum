@@ -113,7 +113,7 @@ let updateNumberMinus = () => {
 
 function getCurrentSlidePreset() {
   let hourses = new Date().getHours();
-  if (hourses > 23 || hourses < 6) {
+  if (hourses > 21 || hourses < 6) {
     slidePreset = slideNightPresetImg;
     return slidePreset
   }
@@ -125,7 +125,7 @@ function getCurrentSlidePreset() {
     slidePreset = slideAfternoonPresetImg;
     return slidePreset
   }
-  if (hourses > 19 || hourses < 0) {
+  if (hourses > 18 || hourses < 22) {
     slidePreset = slideEveningPresetImg;
     return slidePreset
   }

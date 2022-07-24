@@ -96,7 +96,7 @@ function getCurrentDateString() {
 
 function getCurrentHelloString() {
   let hours = new Date().getHours();
-  if (hours > 23 || hours < 6) {
+  if (hours > 21 || hours < 6) {
     return 'Good&thinsp;night,&thinsp;&thinsp;'
   }
   if (hours > 5 && hours < 11) {
@@ -105,7 +105,7 @@ function getCurrentHelloString() {
   if (hours > 10 && hours < 20) {
     return 'Good&thinsp;afternoon,&thinsp;&thinsp;'
   }
-  if (hours > 19 || hours < 0) {
+  if (hours > 18 || hours < 22) {
     return 'Good&thinsp;evening,&thinsp;&thinsp;'
   }
 }
