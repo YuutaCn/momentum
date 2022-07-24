@@ -11,8 +11,8 @@ requestQuotes.onload = function () {
     console.log(i)
     return Number(i)
   }
-  quotesText.innerHTML = quotes[getRandomArbitrary()].quotesText
-  quotesAuthor.innerHTML = quotes[getRandomArbitrary()].author
+  quotesText.innerHTML = `&mdash; ${quotes[i].quotesText}`
+  quotesAuthor.innerHTML = `&laquo;${quotes[i].author}&raquo;`
 };
 
 let quotesText = document.querySelector('.quotes__text');
@@ -29,8 +29,8 @@ let quotesInHTML = () => {
     return Number(i)
   }
   getRandomArbitrary();
-  quotesText.innerHTML = quotes[i].quotesText
-  quotesAuthor.innerHTML = quotes[i].author
+  quotesText.innerHTML = `&mdash; ${quotes[i].quotesText}`
+  quotesAuthor.innerHTML = `&laquo;${quotes[i].author}&raquo;`
 }
 
 // Button
@@ -39,26 +39,32 @@ let quotesSvg = document.querySelector('.quotes-btn__svg');
 
 quotesButton.onmouseover = function () {
   quotesSvg.style.transition = 'all 700ms ease-in-out';
-  quotesSvg.style.transform = 'rotate(-40deg)';
+  quotesSvg.style.transform = 'rotate(-90deg)';
 };
 
 quotesButton.onmouseleave = function () {
-  quotesSvg.style.transition = 'all 700ms ease-out';
+  quotesSvg.style.transition = 'all 700ms ease-in-out';
   quotesSvg.style.transform = 'rotate(0deg)';
 };
 
 quotesButton.addEventListener('click', (e) => {
+  loadedDotToRight()
+  loadedDotToLeft()
+  setTimeout(() => {
+    loadedDotToLeft()
+    loadedDotToRight()
+  }, 700)
   quotesSvg.style.transition = 'all 800ms ease-in';
-  quotesSvg.style.transform = 'rotate(-360deg)';
+  quotesSvg.style.transform = 'rotate(-540deg)';
   setTimeout(() => {
     quotesSvg.style.transition = 'all 100ms ease-out';
-    quotesSvg.style.transform = 'rotate(-380deg)';
+    quotesSvg.style.transform = 'rotate(-560deg)';
     setTimeout(() => {
       quotesSvg.style.transition = 'all 200ms ease-in';
-      quotesSvg.style.transform = 'rotate(-360deg)';
+      quotesSvg.style.transform = 'rotate(-540deg)';
       setTimeout(() => {
         quotesSvg.style.transition = 'all 150ms ease-out';
-        quotesSvg.style.transform = 'rotate(-365deg)';
+        quotesSvg.style.transform = 'rotate(-545deg)';
       }, 200);
     }, 200);
   }, 800);
