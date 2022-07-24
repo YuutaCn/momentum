@@ -1,5 +1,5 @@
 :root {
-  --gradietColor: rgba(0, 0, 0, 0.7);
+  --gradietColor: rgba(0, 0, 0, 0.6);
   --black: #000;
   --white: rgb(227, 227, 227);
   --white-08: rgba(255, 255, 255, 0.8);
@@ -39,26 +39,23 @@ input::-webkit-search-results-decoration {
   top: 0;
   left: 0;
   font-family: 'Magra', 'Red Hat Text', 'Aleo', sans-serif;
-  position: relative;
+  position: fixed;
   z-index: 1;
-  /* background: url(../assets/swiper/1-night/1.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
-  /* overflow-y: hidden;
-  overflow-x: hidden; */
 }
 
-::-webkit-scrollbar { /* chrome based */
-  width: 0px;  /* ширина scrollbar'a */
-  background: transparent;  /* опционально */
+::-webkit-scrollbar { 
+  width: 0px;
+  background: transparent;
 }
 
 
 
 .backGroundShadow {
   position: relative;
-  z-index: 3;
-  background: radial-gradient(circle farthest-corner at top, rgba(0, 0, 0, 0.2), var(--gradietColor));
+  z-index: 4;
+  background: radial-gradient(circle farthest-corner at top, rgba(0, 0, 0, 0.15), var(--gradietColor));
 }
 
 body.lock {

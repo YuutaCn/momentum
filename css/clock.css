@@ -45,8 +45,6 @@
   margin: 0 20px;
   box-shadow: 0 0 10px rgba(29, 51, 74, 0.9),
               inset 0 0 9px rgba(17, 29, 43, 0.3);
-  /* transform: translateX(px); */
-  /* transition: 1000ms; */
 }
 
 .clock__hr-cld,
@@ -63,8 +61,6 @@
   border-radius: 24px;
   box-shadow: 0 0 10px rgba(29, 51, 74, 0.9),
               inset 0 0 9px rgba(17, 29, 43, 0.3);
-  /* transform: translateX(px); */
-  /* transition: 1000ms; */
 }
 
 .clock__anim {
@@ -77,9 +73,10 @@
     transform: scale(1, 1);
   }
 
-  50% {
-    transform: scale(0.995, 0.995);
-    background-color: rgb(27, 48, 72);
+  30% {
+    /* background-color: rgb(25, 47, 70); */
+    box-shadow: 0 0 10px rgba(29, 51, 74, 0.9),
+              inset 0 0 25px rgba(17, 29, 43, 0.4);
   } 
 
   100% {

@@ -133,6 +133,11 @@
       <header class="header container"></header>
 
       <main class="main container">
+        <div class="loaded-background">
+          <div class="loaded-background__one">.</div>
+          <div class="loaded-background__two">.</div>
+          <div class="loaded-background__three">.</div>
+        </div>
         <div class="clocks" id="clock">
           <div class="clock">
             <div class="clock__hr"></div>
@@ -167,6 +172,14 @@
             width="70"
           />
         </button>
+
+        <div class="quotes">
+          <button class="quotes-btn">
+            <img class="quotes-btn__svg" src="./assets/svg/reload.svg" alt="quotes-btn__svg" height="70">
+          </button>
+          <div class="quotes__text"></div>
+          <div class="quotes__author"></div>
+        </div>
 
         <button class="github-btn btn-on-click" id="github">
           <a
@@ -205,6 +218,8 @@
       <script src="./js/popup.js"></script>
       <script src="./js/github.js"></script>
       <script src="./js/backGroudSwiper.js"></script>
+      <!-- <script src="./json/quotes.json"></script> -->
+      <script src="./js/quotes.js"></script>
       <script src="./js/settings.js"></script>
     </div>
   </body>

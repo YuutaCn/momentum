@@ -145,6 +145,24 @@ if (localStorage.getItem('slideNumber') === null || localStorage.getItem('slideN
 }
 
 rightButton.addEventListener('click', (e) => {
+
+  // let requestBackground = new XMLHttpRequest();
+  // let quotes = {};
+  // requestBackground.open('GET', './json/quotes.json', true);
+  // requestBackground.responseType = 'jpg'
+  // requestBackground.send();
+  // requestBackground.onload = function () {
+  //   quotes = requestQuotes.response;
+  //   let getRandomArbitrary = () => {
+  //     let i = Math.random() * (22 - 1) + 1;
+  //     i = Math.round(i)
+  //     console.log(i)
+  //     return Number(i)
+  //   }
+  //   quotesText.innerHTML = quotes[getRandomArbitrary()].quotesText
+  //   quotesAuthor.innerHTML = quotes[getRandomArbitrary()].author
+  // };
+
   updateNumberPlus()
   localStorage.setItem('slideNumber', `${i - 1}`)
   bodyBackGround.style.background = `url(${getCurrentSlidePreset()}/${String(localStorage.getItem('slideNumber'))}.jpg) no-repeat center`;
@@ -208,8 +226,8 @@ let autoPlusSlide = () => {
 };
 
 
-if (localStorage.getItem('AutoBtnOp') = 'enabled') {
+if (localStorage.getItem('AutoBtnOp') === 'enabled') {
   setInterval(() => {
     autoPlusSlide();
   }, 20 * 100 * 60 * 60);
-}
+};

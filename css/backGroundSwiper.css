@@ -64,3 +64,11 @@
   top: 9.5px;
 }
 
+.loaded-background {
+  display: flex;
+  flex-direction: row;
+  color: var(--white);
+  gap: 10px;
+  margin: 5px;
+  font-size: 24px;
+}
