@@ -242,3 +242,54 @@ hideWelcome.addEventListener('click', (e) => {
     updaterWelcome();
   }
 });
+
+
+// Welcome text
+let loadingId = document.querySelector('.loaded-background')
+let hideLoading = document.querySelector('.loading-settings')
+
+
+let updaterLoading = () => {
+  if (localStorage.getItem('loadingIdOp') != 'hidden') {
+    loadingId.style.transition = 'all 700ms ease-out';
+    loadingId.style.opacity = '1';
+    loadingId.style.visibility = 'visible';
+    loadingId.style.transform = 'scale(1, 1)'
+    hideLoading.innerHTML = 'Show'
+    hideLoading.style.transition = '700ms'
+    hideLoading.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
+    hideLoading.onmouseover = function () {
+      hideLoading.style.background = "rgb(36, 36, 36)";
+    };
+    hideLoading.onmouseleave = function () {
+      hideLoading.style.background = "rgb(18, 18, 18)";
+    }
+  } else {
+    loadingId.style.transition = 'all 700ms ease-in';
+    loadingId.style.opacity = '0';
+    loadingId.style.visibility = 'hidden';
+    loadingId.style.transform = 'scale(0.8, 0.8)'
+    hideLoading.innerHTML = 'Hide';
+    hideLoading.style.transition = '700ms'
+    hideLoading.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
+    hideLoading.onmouseover = function () {
+      hideLoading.style.background = "rgb(36, 36, 36)";
+    };
+    hideLoading.onmouseleave = function () {
+      hideLoading.style.background = "rgb(18, 18, 18)";
+    };
+  }
+}
+
+updaterLoading();
+
+
+hideLoading.addEventListener('click', (e) => {
+  if (localStorage.getItem('loadingIdOp') == 'hidden') {
+    localStorage.setItem('loadingIdOp', 'visible');
+    updaterLoading();
+  } else {
+    localStorage.setItem('loadingIdOp', 'hidden');
+    updaterLoading();
+  }
+});
