@@ -6,6 +6,23 @@
 
 }
 
+.player-full {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-full__hide-button {
+  height: 80px;
+  width: 5px;
+  background-color: var(--clock-backGround);
+  border-radius: 2px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+}
+
 .list {
   margin: 0;
   padding: 0;
@@ -36,6 +53,7 @@
   flex-direction: column;
   background-color: var(--clock-perrent);
   height: 110px;
+  visibility: visible;
 }
 
 .player__header {

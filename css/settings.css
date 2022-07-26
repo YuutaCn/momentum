@@ -1,9 +1,17 @@
 .footer {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .settings {
@@ -12,7 +20,7 @@
   border: none;
   border-radius: 50%;
   background-color: rgba(29, 51, 74, 0.4);
-  transition: all 700ms ease-out;
+  transition: all 400ms ease-out;
   overflow: hidden;
   cursor: pointer;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0px 0px 0px #000;
 }
@@ -24,7 +32,7 @@
 }
 
 .settings__svg {
-  transition: all 1.2s ease-in-out;
+  transition: all 600ms ease-in-out;
 }
 
 .settings__svg:hover {
@@ -105,7 +113,7 @@
   border-radius: 6px;
   color: var(--white);
   cursor: pointer;
-  transition: all 700ms ease-out 30ms;
+  transition: all 400ms ease-out 30ms;
 }
 
 .settings-list__button:hover {

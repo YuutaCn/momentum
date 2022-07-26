@@ -34,12 +34,12 @@ let quotesButton = document.querySelector('.quotes-btn');
 let quotesSvg = document.querySelector('.quotes-btn__svg');
 
 quotesButton.onmouseover = function () {
-  quotesSvg.style.transition = 'all 700ms ease-in-out';
+  quotesSvg.style.transition = 'all 400ms ease-in-out';
   quotesSvg.style.transform = 'rotate(-90deg)';
 };
 
 quotesButton.onmouseleave = function () {
-  quotesSvg.style.transition = 'all 700ms ease-in-out';
+  quotesSvg.style.transition = 'all 400ms ease-in-out';
   quotesSvg.style.transform = 'rotate(0deg)';
 };
 
@@ -50,7 +50,7 @@ quotesButton.addEventListener('click', (e) => {
     loadedDotToLeft()
     loadedDotToRight()
   }, 700)
-  quotesSvg.style.transition = 'all 800ms ease-in';
+  quotesSvg.style.transition = 'all 500ms ease-in';
   quotesSvg.style.transform = 'rotate(-540deg)';
   setTimeout(() => {
     quotesSvg.style.transition = 'all 100ms ease-out';
@@ -63,8 +63,8 @@ quotesButton.addEventListener('click', (e) => {
         quotesSvg.style.transform = 'rotate(-545deg)';
       }, 200);
     }, 200);
-  }, 800);
+  }, 500);
   setTimeout(() => {
     quotesInHTML();
-  }, 800)
+  }, 500)
 });

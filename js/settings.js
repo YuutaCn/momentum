@@ -5,12 +5,12 @@ let hideClock = document.querySelector('.hide-clock')
 
 let updaterClock = () => {
   if (localStorage.getItem('clockAndDateOp') != 'hidden') {
-    clockAndDate.style.transition = 'all 700ms ease-out';
+    clockAndDate.style.transition = 'all 400ms ease-out';
     clockAndDate.style.opacity = '1';
     clockAndDate.style.visibility = 'visible';
     clockAndDate.style.transform = 'scale(1, 1)'
     hideClock.innerHTML = 'Show'
-    hideClock.style.transition = '700ms'
+    hideClock.style.transition = '400ms'
     hideClock.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
     hideClock.onmouseover = function () {
       hideClock.style.background = "rgb(36, 36, 36)";
@@ -19,12 +19,12 @@ let updaterClock = () => {
       hideClock.style.background = "rgb(18, 18, 18)";
     }
   } else {
-    clockAndDate.style.transition = 'all 700ms ease-in';
+    clockAndDate.style.transition = 'all 400ms ease-in';
     clockAndDate.style.opacity = '0';
     clockAndDate.style.visibility = 'hidden';
     clockAndDate.style.transform = 'scale(0.8, 0.8)'
     hideClock.innerHTML = 'Hide';
-    hideClock.style.transition = '700ms'
+    hideClock.style.transition = '400ms'
     hideClock.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
     hideClock.onmouseover = function () {
       hideClock.style.background = "rgb(36, 36, 36)";
@@ -57,12 +57,12 @@ let hideGithub = document.querySelector('.hide-github')
 
 let updaterGithub = () => {
   if (localStorage.getItem('githubIdOp') != 'hidden') {
-    githubId.style.transition = 'all 700ms ease-out';
+    githubId.style.transition = 'all 400ms ease-out';
     githubId.style.opacity = '1';
     githubId.style.visibility = 'visible';
     githubId.style.transform = 'scale(1, 1)'
     hideGithub.innerHTML = 'Show'
-    hideGithub.style.transition = '700ms'
+    hideGithub.style.transition = '400ms'
     hideGithub.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
     hideGithub.onmouseover = function () {
       hideGithub.style.background = "rgb(36, 36, 36)";
@@ -71,12 +71,12 @@ let updaterGithub = () => {
       hideGithub.style.background = "rgb(18, 18, 18)";
     }
   } else {
-    githubId.style.transition = 'all 700ms ease-in';
+    githubId.style.transition = 'all 400ms ease-in';
     githubId.style.opacity = '0';
     githubId.style.visibility = 'hidden';
     githubId.style.transform = 'scale(0.8, 0.8)'
     hideGithub.innerHTML = 'Hide';
-    hideGithub.style.transition = '700ms'
+    hideGithub.style.transition = '400ms'
     hideGithub.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
     hideGithub.onmouseover = function () {
       hideGithub.style.background = "rgb(36, 36, 36)";
@@ -108,7 +108,7 @@ let autoBtn = document.querySelector('.autoBg');
 let autoBg = () => {
   if (localStorage.getItem('autoBtnOp') != 'disabled') {
     autoBtn.innerHTML = 'Enable'
-    autoBtn.style.transition = '700ms'
+    autoBtn.style.transition = '400ms'
     autoBtn.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
     autoBtn.onmouseover = function () {
       autoBtn.style.background = "rgb(36, 36, 36)";
@@ -118,7 +118,7 @@ let autoBg = () => {
     }
   } else {
     autoBtn.innerHTML = 'Disable';
-    autoBtn.style.transition = '700ms'
+    autoBtn.style.transition = '400ms'
     autoBtn.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
     autoBtn.onmouseover = function () {
       autoBtn.style.background = "rgb(36, 36, 36)";
@@ -149,12 +149,12 @@ let hideQuotes = document.querySelector('.quotes-settings')
 
 let updaterQuotes = () => {
   if (localStorage.getItem('quotesIdOp') != 'hidden') {
-    quotesId.style.transition = 'all 700ms ease-out';
+    quotesId.style.transition = 'all 400ms ease-out';
     quotesId.style.opacity = '1';
     quotesId.style.visibility = 'visible';
     quotesId.style.transform = 'scale(1, 1)'
     hideQuotes.innerHTML = 'Show'
-    hideQuotes.style.transition = '700ms'
+    hideQuotes.style.transition = '400ms'
     hideQuotes.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
     hideQuotes.onmouseover = function () {
       hideQuotes.style.background = "rgb(36, 36, 36)";
@@ -163,12 +163,12 @@ let updaterQuotes = () => {
       hideQuotes.style.background = "rgb(18, 18, 18)";
     }
   } else {
-    quotesId.style.transition = 'all 700ms ease-in';
+    quotesId.style.transition = 'all 400ms ease-in';
     quotesId.style.opacity = '0';
     quotesId.style.visibility = 'hidden';
     quotesId.style.transform = 'scale(0.8, 0.8)'
     hideQuotes.innerHTML = 'Hide';
-    hideQuotes.style.transition = '700ms'
+    hideQuotes.style.transition = '400ms'
     hideQuotes.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
     hideQuotes.onmouseover = function () {
       hideQuotes.style.background = "rgb(36, 36, 36)";
@@ -200,12 +200,12 @@ let hideWelcome = document.querySelector('.welcome-settings')
 
 let updaterWelcome = () => {
   if (localStorage.getItem('welcomeIdOp') != 'hidden') {
-    welcomeId.style.transition = 'all 700ms ease-out';
+    welcomeId.style.transition = 'all 400ms ease-out';
     welcomeId.style.opacity = '1';
     welcomeId.style.visibility = 'visible';
     welcomeId.style.transform = 'scale(1, 1)'
     hideWelcome.innerHTML = 'Show'
-    hideWelcome.style.transition = '700ms'
+    hideWelcome.style.transition = '400ms'
     hideWelcome.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
     hideWelcome.onmouseover = function () {
       hideWelcome.style.background = "rgb(36, 36, 36)";
@@ -214,12 +214,12 @@ let updaterWelcome = () => {
       hideWelcome.style.background = "rgb(18, 18, 18)";
     }
   } else {
-    welcomeId.style.transition = 'all 700ms ease-in';
+    welcomeId.style.transition = 'all 400ms ease-in';
     welcomeId.style.opacity = '0';
     welcomeId.style.visibility = 'hidden';
     welcomeId.style.transform = 'scale(0.8, 0.8)'
     hideWelcome.innerHTML = 'Hide';
-    hideWelcome.style.transition = '700ms'
+    hideWelcome.style.transition = '400ms'
     hideWelcome.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
     hideWelcome.onmouseover = function () {
       hideWelcome.style.background = "rgb(36, 36, 36)";
@@ -251,12 +251,12 @@ let hideLoading = document.querySelector('.loading-settings')
 
 let updaterLoading = () => {
   if (localStorage.getItem('loadingIdOp') != 'hidden') {
-    loadingId.style.transition = 'all 700ms ease-out';
+    loadingId.style.transition = 'all 400ms ease-out';
     loadingId.style.opacity = '1';
     loadingId.style.visibility = 'visible';
     loadingId.style.transform = 'scale(1, 1)'
     hideLoading.innerHTML = 'Show'
-    hideLoading.style.transition = '700ms'
+    hideLoading.style.transition = '400ms'
     hideLoading.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
     hideLoading.onmouseover = function () {
       hideLoading.style.background = "rgb(36, 36, 36)";
@@ -265,12 +265,12 @@ let updaterLoading = () => {
       hideLoading.style.background = "rgb(18, 18, 18)";
     }
   } else {
-    loadingId.style.transition = 'all 700ms ease-in';
+    loadingId.style.transition = 'all 400ms ease-in';
     loadingId.style.opacity = '0';
     loadingId.style.visibility = 'hidden';
     loadingId.style.transform = 'scale(0.8, 0.8)'
     hideLoading.innerHTML = 'Hide';
-    hideLoading.style.transition = '700ms'
+    hideLoading.style.transition = '400ms'
     hideLoading.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
     hideLoading.onmouseover = function () {
       hideLoading.style.background = "rgb(36, 36, 36)";
@@ -296,18 +296,18 @@ hideLoading.addEventListener('click', (e) => {
 
 
 // Player
-let PlayerId = document.querySelector('.player')
+let PlayerId = document.querySelector('.player-full')
 let hidePlayer = document.querySelector('.player-settings')
 
 
 let updaterPlayer = () => {
   if (localStorage.getItem('PlayerIdOp') != 'hidden') {
-    PlayerId.style.transition = 'all 700ms ease-out';
+    PlayerId.style.transition = 'all 400ms ease-out';
     PlayerId.style.opacity = '1';
     PlayerId.style.visibility = 'visible';
     PlayerId.style.transform = 'scale(1, 1)'
     hidePlayer.innerHTML = 'Enable'
-    hidePlayer.style.transition = '700ms'
+    hidePlayer.style.transition = '400ms'
     hidePlayer.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
     hidePlayer.onmouseover = function () {
       hidePlayer.style.background = "rgb(36, 36, 36)";
@@ -316,12 +316,12 @@ let updaterPlayer = () => {
       hidePlayer.style.background = "rgb(18, 18, 18)";
     }
   } else {
-    PlayerId.style.transition = 'all 700ms ease-in';
+    PlayerId.style.transition = 'all 400ms ease-in';
     PlayerId.style.opacity = '0';
     PlayerId.style.visibility = 'hidden';
     PlayerId.style.transform = 'scale(0.8, 0.8)'
     hidePlayer.innerHTML = 'Disable';
-    hidePlayer.style.transition = '700ms'
+    hidePlayer.style.transition = '400ms'
     hidePlayer.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
     hidePlayer.onmouseover = function () {
       hidePlayer.style.background = "rgb(36, 36, 36)";
@@ -342,5 +342,56 @@ hidePlayer.addEventListener('click', (e) => {
   } else {
     localStorage.setItem('PlayerIdOp', 'hidden');
     updaterPlayer();
+  }
+});
+
+
+// Weather
+let weatherId = document.querySelector('.weather-full')
+let hideWeather = document.querySelector('.weather-settings')
+
+
+let updaterWeather = () => {
+  if (localStorage.getItem('weatherIdOp') != 'hidden') {
+    weatherId.style.transition = 'all 400ms ease-out';
+    weatherId.style.opacity = '1';
+    weatherId.style.visibility = 'visible';
+    weatherId.style.transform = 'scale(1, 1)'
+    hideWeather.innerHTML = 'Enable'
+    hideWeather.style.transition = '400ms'
+    hideWeather.style.border = 'solid 1px rgba(177, 226, 156, 0.8)';
+    hideWeather.onmouseover = function () {
+      hideWeather.style.background = "rgb(36, 36, 36)";
+    };
+    hideWeather.onmouseleave = function () {
+      hideWeather.style.background = "rgb(18, 18, 18)";
+    }
+  } else {
+    weatherId.style.transition = 'all 400ms ease-in';
+    weatherId.style.opacity = '0';
+    weatherId.style.visibility = 'hidden';
+    weatherId.style.transform = 'scale(0.8, 0.8)'
+    hideWeather.innerHTML = 'Disable';
+    hideWeather.style.transition = '400ms'
+    hideWeather.style.border = 'solid 1px rgba(226, 156, 156, 0.8)';
+    hideWeather.onmouseover = function () {
+      hideWeather.style.background = "rgb(36, 36, 36)";
+    };
+    hideWeather.onmouseleave = function () {
+      hideWeather.style.background = "rgb(18, 18, 18)";
+    };
+  }
+}
+
+updaterWeather();
+
+
+hideWeather.addEventListener('click', (e) => {
+  if (localStorage.getItem('weatherIdOp') == 'hidden') {
+    localStorage.setItem('weatherIdOp', 'visible');
+    updaterWeather();
+  } else {
+    localStorage.setItem('weatherIdOp', 'hidden');
+    updaterWeather();
   }
 });

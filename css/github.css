@@ -4,7 +4,7 @@
   border: none;
   border-radius: 50%;
   background-color: rgba(29, 51, 74, 0.4);
-  transition: all 700ms ease-out;
+  transition: all 400ms ease-out;
   overflow: hidden;
   cursor: pointer;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0px 0px 0px #000;
 }
@@ -25,5 +25,5 @@
 .github-btn__svg-1,
 .github-btn__svg-2 {
   transform: translateX(0);
-  transition: all 0.7s ease-out;
+  transition: all 400ms ease-out;
 }

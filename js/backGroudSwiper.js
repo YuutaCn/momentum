@@ -14,8 +14,8 @@ rightArrowUp.style.transform = 'rotate(-45deg)';
 rightArrowDown.style.transform = 'rotate(45deg)';
 
 leftButton.onmouseover = function () {
-  leftArrowUp.style.transition = 'all 500ms ease-out'
-  leftArrowDown.style.transition = 'all 500ms ease-out'
+  leftArrowUp.style.transition = 'all 200ms ease-out'
+  leftArrowDown.style.transition = 'all 200ms ease-out'
   leftArrowUp.style.height = '4px';
   leftArrowDown.style.height = '4px';
   leftArrowUp.style.transform = 'rotate(42deg) translateY(-0.6px)';
@@ -23,8 +23,8 @@ leftButton.onmouseover = function () {
 };
 
 leftButton.onmouseleave = function () {
-  leftArrowUp.style.transition = 'all 500ms ease-out'
-  leftArrowDown.style.transition = 'all 500ms ease-out'
+  leftArrowUp.style.transition = 'all 200ms ease-out'
+  leftArrowDown.style.transition = 'all 200ms ease-out'
   leftArrowUp.style.height = '3px';
   leftArrowDown.style.height = '3px';
   leftArrowUp.style.transform = 'rotate(45deg)';
@@ -32,8 +32,8 @@ leftButton.onmouseleave = function () {
 };
 
 rightButton.onmouseover = function () {
-  rightArrowUp.style.transition = 'all 500ms ease-out'
-  rightArrowDown.style.transition = 'all 500ms ease-out'
+  rightArrowUp.style.transition = 'all 200ms ease-out'
+  rightArrowDown.style.transition = 'all 200ms ease-out'
   rightArrowUp.style.height = '4px';
   rightArrowDown.style.height = '4px';
   rightArrowUp.style.transform = 'rotate(-42deg) translateY(-0.6px)';
@@ -41,8 +41,8 @@ rightButton.onmouseover = function () {
 };
 
 rightButton.onmouseleave = function () {
-  rightArrowUp.style.transition = 'all 500ms ease-out'
-  rightArrowDown.style.transition = 'all 500ms ease-out'
+  rightArrowUp.style.transition = 'all 200ms ease-out'
+  rightArrowDown.style.transition = 'all 200ms ease-out'
   rightArrowUp.style.height = '3px';
   rightArrowDown.style.height = '3px';
   rightArrowUp.style.transform = 'rotate(-45deg)';
@@ -52,8 +52,8 @@ rightButton.onmouseleave = function () {
 leftButton.addEventListener('click', (e) => {
   leftArrowUp.style.transform = 'rotate(35deg) translateY(-3px)';
   leftArrowDown.style.transform = 'rotate(-35deg) translateY(3px)';
-  leftArrowUp.style.transition = 'all 200ms ease-out'
-  leftArrowDown.style.transition = 'all 200ms ease-out'
+  leftArrowUp.style.transition = 'all 150ms ease-out'
+  leftArrowDown.style.transition = 'all 150ms ease-out'
   setTimeout(() => {
     leftArrowUp.style.transform = 'rotate(42deg) translateY(-0.6px)';
     leftArrowDown.style.transform = 'rotate(-42deg) translateY(0.6px)';
@@ -63,8 +63,8 @@ leftButton.addEventListener('click', (e) => {
 rightButton.addEventListener('click', (e) => {
   rightArrowUp.style.transform = 'rotate(-35deg) translateY(-3px)';
   rightArrowDown.style.transform = 'rotate(35deg) translateY(3px)';
-  rightArrowUp.style.transition = 'all 200ms ease-out'
-  rightArrowDown.style.transition = 'all 200ms ease-out'
+  rightArrowUp.style.transition = 'all 150ms ease-out'
+  rightArrowDown.style.transition = 'all 150ms ease-out'
   setTimeout(() => {
     rightArrowUp.style.transform = 'rotate(-42deg) translateY(-0.6px)';
     rightArrowDown.style.transform = 'rotate(42deg) translateY(0.6px)';
@@ -221,7 +221,7 @@ rightButton.addEventListener('click', (e) => {
   requestBackground.onload = function () {
     bodyBackGround.style.background = `url(${requestBackground.responseURL}) no-repeat center`;
     bodyBackGround.style.backgroundSize = 'cover'
-    bodyBackGroundContainer.style.transition = 'all 2000ms ease-in 500ms';
+    bodyBackGroundContainer.style.transition = 'all 1200ms ease-in 500ms';
     bodyBackGroundContainer.style.opacity = '0';
     bodyBackGroundContainer.style.transform = 'scale(1.1, 1.1)';
     bodyBackGroundContainer.style.visibility = 'hidden';
@@ -236,7 +236,7 @@ rightButton.addEventListener('click', (e) => {
       bodyBackGroundContainer.style.transform = 'scale(1, 1)';
       bodyBackGroundContainer.style.background = `url(${requestBackground.responseURL}) no-repeat center`;
       bodyBackGroundContainer.style.backgroundSize = 'cover';
-    }, 2700);
+    }, 1900);
   }
 });
 
@@ -260,7 +260,7 @@ leftButton.addEventListener('click', (e) => {
   requestBackground.onload = function () {
     bodyBackGround.style.background = `url(${requestBackground.responseURL}) no-repeat center`;
     bodyBackGround.style.backgroundSize = 'cover'
-    bodyBackGroundContainer.style.transition = 'all 2000ms ease-in 700ms';
+    bodyBackGroundContainer.style.transition = 'all 1200ms ease-in 500ms';
     bodyBackGroundContainer.style.opacity = '0';
     bodyBackGroundContainer.style.transform = 'scale(1.1, 1.1)';
     bodyBackGroundContainer.style.visibility = 'hidden';
@@ -275,7 +275,7 @@ leftButton.addEventListener('click', (e) => {
       bodyBackGroundContainer.style.background = `url(${requestBackground.responseURL}) no-repeat center`;
       bodyBackGroundContainer.style.transform = 'scale(1, 1)';
       bodyBackGroundContainer.style.backgroundSize = 'cover';
-    }, 2700);
+    }, 1900);
   }
 });
 

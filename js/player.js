@@ -1,6 +1,7 @@
 "use strict";
 const body = document.body;
 const player = document.querySelector(".player");
+const playerHeight = document.querySelector(".player-full__hide-button")
 const playerHeader = player.querySelector(".player__header");
 const playerControls = player.querySelector(".player__controls");
 const playerPlayList = player.querySelectorAll(".player__song");
@@ -29,15 +30,42 @@ let openPlaylist = false
 
 function openPlayer() {
   if (openPlaylist === true) {
-    player.style.transition = 'all 700ms ease-in';
+    player.style.transition = 'all 400ms ease-in';
+    playerHeight.style.transition = 'all400ms ease-out';
+    playerHeight.style.opacity = '1';
+    playerHeight.style.visibility = 'visible';
     player.style.height = '110px';
     openPlaylist = false;
   } else {
-    player.style.transition = 'all 700ms ease-out';
+    player.style.transition = 'all 400ms ease-out';
+    playerHeight.style.transition = 'all 400ms ease-in';
+    playerHeight.style.opacity = '0';
+    playerHeight.style.visibility = 'hidden';
     player.style.height = '300px';
     openPlaylist = true;
   }
 }
+ 
+let playerHeightStatus = true;
+playerHeight.addEventListener('click', () => {
+  if (playerHeightStatus === true) {
+  player.style.transition = 'all 400ms ease-in';
+    player.style.height = '110px';
+    player.style.width = '105px';
+    playerControls.style.transition = 'all 400ms ease-in';
+    playerControls.style.transform = 'translateX(50em)'
+    playerHeightStatus = false;
+  } else {
+    player.style.transition = 'all 400ms ease-in';
+    player.style.height = '110px';
+    player.style.width = '370px';
+    playerControls.style.transition = 'all 400ms ease-out 200ms';
+    playerControls.style.transform = 'translateX(0em)'
+    playerHeightStatus = true;
+  }
+
+
+})
 
 openPlayer()
 
@@ -131,7 +159,7 @@ function playSong() {
 
 function progresUpdate() {
   const progresFilledWidth = (this.currentTime / this.duration) * 100 + "%";
-  progresFilled.style.transition = 'all 500ms ease-out'
+  progresFilled.style.transition = 'all 200ms ease-out'
   progresFilled.style.width = progresFilledWidth;
   if (isPlay && this.duration == this.currentTime) {
     next();
