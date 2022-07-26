@@ -144,3 +144,8 @@ weatherHideButton.addEventListener('click', () => {
     hideWeatherWithButton = false
   }
 });
+
+setInterval(() => {
+  getWeather()
+  console.log('aaa')
+}, 60000);

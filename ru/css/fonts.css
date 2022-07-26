@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'Magra';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/Magra-Bold_c609812048f537ce8a09b949f0ecd59f.ttf') format('ttf'),
+      /* Super Modern Browsers */
+      url('../assets/fonts/Magra-Bold_c609812048f537ce8a09b949f0ecd59f.ttf') format('woff');
+  /* Modern Browsers */
+}
+
+/* red-hat-text-regular - latin */
+@font-face {
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/red-hat-text-v11-latin-regular.woff2') format('woff2'),
+      /* Super Modern Browsers */
+      url('../assets/fonts/red-hat-text-v11-latin-regular.woff') format('woff');
+
+  /* Modern Browsers */
+}
+
+/* red-hat-text-500 - latin */
+@font-face {
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/red-hat-text-v11-latin-500.woff2') format('woff2'),
+      /* Super Modern Browsers */
+      url('../assets/fonts/red-hat-text-v11-latin-500.woff') format('woff');
+  /* Modern Browsers */
+}
+
+/* aleo-regular - latin */
+@font-face {
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/aleo-v11-latin-regular.woff2') format('woff2'),
+      /* Super Modern Browsers */
+      url('../assets/fonts/aleo-v11-latin-regular.woff') format('woff');
+  /* Modern Browsers */
+}
+
+/* aleo-italic - latin */
+@font-face {
+  font-family: 'Aleo';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/aleo-v11-latin-italic.woff2') format('woff2'),
+      /* Super Modern Browsers */
+      url('../assets/fonts/aleo-v11-latin-italic.woff') format('woff');
+  /* Modern Browsers */
+}
+
+/* aleo-700 - latin */
+@font-face {
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/aleo-v11-latin-700.woff2') format('woff2'),
+      /* Super Modern Browsers */
+      url('../assets/fonts/aleo-v11-latin-700.woff') format('woff');
+  /* Modern Browsers */
+}
+
+/* aleo-700italic - latin */
+@font-face {
+  font-family: 'Aleo';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/aleo-v11-latin-700italic.woff2') format('woff2'),
+      /* Super Modern Browsers */
+      url('../assets/fonts/aleo-v11-latin-700italic.woff') format('woff');
+  /* Modern Browsers */
+}
+
+/* poppins-700 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/Poppins-Bold.ttf') format('ttf'),
+      /* Super Modern Browsers */
+}
+
+/* poppins-400 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/Poppins-Light.ttf') format('ttf'),
+      /* Super Modern Browsers */
+}
+
+/* poppins-250 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 250;
+  font-display: swap;
+  src: local(''),
+      url('../assets/fonts/Poppins-Thin.ttf') format('ttf'),
+      /* Super Modern Browsers */
+}
+
+.poppins-700-normal {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.poppins-400-normal {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-250-normal {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 250;
+}
+
+.red-hat-text {
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 500;
+}
+
+.aleo-400-italic,
+.aleo-400-italic::-webkit-input-placeholder {
+  font-family: 'Aleo';
+  font-style: italic;
+  font-weight: 400;
+}
+
+.aleo-700-normal {
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.aleo-700-italic {
+  font-family: 'Aleo';
+  font-style: italic;
+  font-weight: 700;
+}
+
+.aleo-400-normal {
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 400;
+}

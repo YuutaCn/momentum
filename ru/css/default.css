@@ -1,0 +1,111 @@
+:root {
+  --gradietColor: rgba(0, 0, 0, 0.6);
+  --black: #000;
+  --white: rgb(227, 227, 227);
+  --white-08: rgba(255, 255, 255, 0.8);
+  --white-03: rgba(255, 255, 255, 0.3);
+  --placeholder-color: rgb(234, 234, 234);
+  --modal-backGround: rgba(29, 51, 74, 0.702);
+  --madal-backGround-2: rgba(29, 51, 74, 0.8);
+  --modal-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
+  --clock-backGround: rgb(29, 51, 74);
+  --clock-perrent: rgba(29, 51, 74, 0.3);
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+*,
+*::before,
+::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: 'Arial', 'Magra', 'Red Hat Text', 'Aleo', sans-serif;
+  position: fixed;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar { 
+  width: 0px;
+  background: transparent;
+}
+
+
+
+.backGroundShadow {
+  position: relative;
+  z-index: 4;
+  background: radial-gradient(circle farthest-corner at top, rgba(0, 0, 0, 0.15), var(--gradietColor));
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+figure,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  padding: 2% 3%;
+}
+
+.header, 
+.footer {
+  width: 100%;
+  height: 20%;
+}
+
+.main {
+  width: 100%;
+  height: 60%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
